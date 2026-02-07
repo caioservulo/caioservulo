@@ -8,7 +8,7 @@
   <a href="#-formação-acadêmica">Formação</a> •
   <a href="#-licenças-e-certificações">Certificações</a> •
   <a href="#-toolkit-de-produto">Toolkit de Produto</a> •
-  <a href="#-skills-&-proficiency">Habilidades</a> •
+  <a href="#-skills--proficiency">Habilidades</a> •
   <a href="#-cases-de-sucesso">Cases</a> •
   <a href="#-vamos-conectar">Contato</a>
 </p>
