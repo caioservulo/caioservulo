@@ -3,14 +3,15 @@
 ### 🚀 Product Manager | Data Product Owner | Estrategista de Produto
 
 <p align="center">
-  <a href="#-sobre-mim">Sobre Mim</a> •
-  <a href="#-idiomas">Idiomas</a> •
-  <a href="#-formação-acadêmica">Formação</a> •
-  <a href="#-licenças-e-certificações">Certificações</a> •
-  <a href="#-toolkit-de-produto">Toolkit</a> •
-  <a href="#-skills--proficiency">Habilidades</a> •
-  <a href="#-cases-de-sucesso">Cases</a> •
-  <a href="#-vamos-conectar">Contato</a>
+  <a href="#-sobre-mim"><img src="https://img.shields.io/badge/Sobre_Mim-000000?style=for-the-badge&logo=about.me&logoColor=white" /></a>
+  <a href="#-idiomas"><img src="https://img.shields.io/badge/Idiomas-1A1A1A?style=for-the-badge&logo=translate&logoColor=white" /></a>
+  <a href="#-formação-acadêmica"><img src="https://img.shields.io/badge/Formação-2E2E2E?style=for-the-badge&logo=graduation-cap&logoColor=white" /></a>
+  <a href="#-licenças-e-certificações"><img src="https://img.shields.io/badge/Certificações-454545?style=for-the-badge&logo=workspace&logoColor=white" /></a>
+  <a href="#-toolkit-de-produto"><img src="https://img.shields.io/badge/Toolkit-5C5C5C?style=for-the-badge&logo=tools&logoColor=white" /></a>
+  <a href="#-skills--proficiency"><img src="https://img.shields.io/badge/Habilidades-737373?style=for-the-badge&logo=chart-bar&logoColor=white" /></a>
+  <a href="#-trabalho-voluntário-e-mentorias"><img src="https://img.shields.io/badge/Voluntariado-8A8A8A?style=for-the-badge&logo=hands-helping&logoColor=white" /></a>
+  <a href="#-cases-de-sucesso"><img src="https://img.shields.io/badge/Cases-D4AF37?style=for-the-badge&logo=folder-open&logoColor=white" /></a>
+  <a href="#-vamos-conectar"><img src="https://img.shields.io/badge/Contato-BDBDBD?style=for-the-badge&logo=send&logoColor=black" /></a>
 </p>
 
 ---
@@ -42,6 +43,33 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 ![Português](https://img.shields.io/badge/Português-Nativo-brightgreen?style=for-the-badge)
 ![Inglês](https://img.shields.io/badge/Inglês-Avançado-blue?style=for-the-badge)
 ![Espanhol](https://img.shields.io/badge/Espanhol-Intermediário-orange?style=for-the-badge)
+
+---
+
+### 🌐 Idiomas
+
+<table border="0">
+  <tr>
+    <td width="33%" align="center">
+      <img src="https://raw.githubusercontent.com/lucasbento/lucasbento/master/assets/brazil-flag.png" width="30px"/><br/>
+      <strong>Português</strong><br/>
+      <sub>Nativo</sub><br/>
+      <img src="https://geps.dev/progress/100?dangerColor=333333&warningColor=333333&successColor=000000" width="100">
+    </td>
+    <td width="33%" align="center">
+      <img src="https://raw.githubusercontent.com/lucasbento/lucasbento/master/assets/us-flag.png" width="30px"/><br/>
+      <strong>Inglês</strong><br/>
+      <sub>Avançado / Fluente</sub><br/>
+      <img src="https://geps.dev/progress/90?dangerColor=333333&warningColor=333333&successColor=000000" width="100">
+    </td>
+    <td width="33%" align="center">
+      <img src="https://raw.githubusercontent.com/lucasbento/lucasbento/master/assets/spain-flag.png" width="30px"/><br/>
+      <strong>Espanhol</strong><br/>
+      <sub>Intermediário</sub><br/>
+      <img src="https://geps.dev/progress/65?dangerColor=333333&warningColor=333333&successColor=000000" width="100">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -92,6 +120,20 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 ---
 
+### 🤝 Trabalho Voluntário e Mentorias
+
+<p align="left">
+  <strong>Mentor em Gestão de Produto, Estratégia de Negócios e Projetos</strong> para mais de 6 empresas, auxiliando na estruturação de roadmaps e processos ágeis.
+</p>
+
+| Instituição | Função | Descrição do Projeto | Período |
+| :--- | :--- | :--- | :--- |
+| **Pipoca Ágil** | Product Owner | Liderança da evolução da plataforma da comunidade, priorização de backlog e facilitação de rituais ágeis para disseminação de conhecimento. | Jul 2025 — Presente |
+| **FEJECE** | Board Member | Atuação no Conselho Consultivo da Federação de Empresas Juniores, apoiando a estratégia de crescimento e governança das empresas juniores do Ceará. | Dez 2018 — Jun 2019 |
+| **CORAq** | Chief Executive Officer (CEO) | Liderança executiva da empresa júnior, focada em estratégia de vendas, cultura organizacional e entrega de projetos de consultoria técnica. | Jun 2018 — Jun 2019 |
+
+---
+
 ### 📁 Cases de Sucesso
 
 Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentação completa de cada case na pasta [`/cases`](./cases).
@@ -102,12 +144,15 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
     * *Impacto:* AUmento da assertividade de análises em 60% e democratização de dados.
 * **[Case 03: Gestão de crise e construção rápida](./cases/bv-normativa.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
-* **[Case 04: Desenvolvimento de novo produto - foco no ecossistema](./cases/produto-rh.md)**
+* **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/produto-rh.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
+* **[Case 04: Desenvolvimento de novo produto de gateway de pagamentos - foco no ecossistema](./cases/produto-gateway.md)**
+    * *Impacto:* Validação de produto com baixo esforço do time de engenharia.
 * **[Case 05: Desenvolvimento low code - gestão de casa](./cases/financeiro-casa.md)**
     * *Impacto:*Gestão de gastos familiares com mesno esforço.
 * **[Case 06: Pandemia e um projeto que virou produto.](./cases/projeto-sas-pandemia.md)**
     * *Impacto:* Criação de novo produto aumentando o volume de leads captados em 43%.
+
 ---
 
 ### 📊 GitHub Stats
