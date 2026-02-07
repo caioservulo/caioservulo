@@ -7,7 +7,7 @@
   <a href="#-idiomas">Idiomas</a> •
   <a href="#-formação-acadêmica">Formação</a> •
   <a href="#-licenças-e-certificações">Certificações</a> •
-  <a href="#-toolkit-de-produto">Toolkit de Produto</a> •
+  <a href="#-toolkit-de-produto">Toolkit</a> •
   <a href="#-skills--proficiency">Habilidades</a> •
   <a href="#-cases-de-sucesso">Cases</a> •
   <a href="#-vamos-conectar">Contato</a>
@@ -77,7 +77,7 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 | **Frameworks** | `Scrum`, `Kanban`, `Jobs to be Done`, `OKRs`, `KPIs` |
 
 
-### 🛠️ Skills & Proficiency
+### 📈 Skills & Proficiency
 
 | Skill | Nível | % |
 | --- | --- | --- |
