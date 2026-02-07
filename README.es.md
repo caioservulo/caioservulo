@@ -136,20 +136,16 @@ Poseo habilidades en Product Discovery, metodologías ágiles y Lean, análisis 
 
 A continuación se presentan algunos de los desafíos que he liderado. Puedes acceder a la documentación completa de cada caso en la carpeta [`/cases`](./cases).
 
-* **[Caso 01: Gestión de la Experiencia del Cliente - Disrupción](./cases/cx-paguemenos.md)**
+* **[Caso 01: Gestión de la Experiencia del Cliente - Disrupción](./cases/es/cx-paguemenos.md)**
     * *Impacto:* Mayor nivel de servicio, NPS, volumen de clientes atendidos y visibilidad de datos de clientes en la historia de la empresa.
-* **[Caso 02: Modernización de Pipeline de Datos](./cases/data-pipeline.md)**
+* **[Caso 02: Modernización de Pipeline de Datos](./cases/es/data-pipeline.md)**
     * *Impacto:* Aumento de la asertividad de los análisis en un 60% y democratización de los datos.
-* **[Caso 03: Gestión de crisis y construcción rápida](./cases/bv-normativa.md)**
+* **[Caso 03: Gestión de crisis y construcción rápida](./cases/es/bv-normativa.md)**
     * *Impacto:* Validación de producto (en alta fidelidad) con cero esfuerzo del equipo de ingeniería.
-* **[Caso 04: Desarrollo de nuevo producto de RR.HH. - enfoque en el ecosistema](./cases/produto-rh.md)**
+* **[Caso 04: Desarrollo de nuevo producto de RR.HH. - enfoque en el ecosistema](./cases/es/produto-rh.md)**
     * *Impacto:* Validación de producto (en alta fidelidad) con cero esfuerzo del equipo de ingeniería.
-* **[Caso 05: Desarrollo de nuevo producto de pasarela de pagos - enfoque en el ecosistema](./cases/produto-gateway.md)**
-    * *Impacto:* Validación de producto con bajo esfuerzo del equipo de ingeniería.
-* **[Caso 06: Desarrollo low code - gestión del hogar](./cases/financeiro-casa.md)**
-    * *Impacto:* Gestión de gastos familiares con menor esfuerzo.
-* **[Caso 07: Pandemia y un proyecto que se convirtió en producto.](./cases/projeto-sas-pandemia.md)**
-    * *Impacto:* Creación de un nuevo producto aumentando el volumen de leads captados en un 43%.
+* **[Caso 05: Pandemia y un proyecto que se convirtió en producto.](./cases/es/projeto-sas-pandemia.md)**
+    * *Impacto:* Creación de un nuevo producto, aumentando la tasa de retención de clientes en un 95%.
 
 ---
 
