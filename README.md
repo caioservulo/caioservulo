@@ -64,7 +64,7 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 | 🇧🇷 Português | 🇺🇸 Inglês | 🇪🇸 Espanhol |
 | :---: | :---: | :---: |
 | **Nativo** | **Avançado** | **Intermediário** |
-| <img src="https://img.shields.io/badge/---100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---65%25-8A8A8A?style=flat-square" width="120"> |
+| <img src="https://img.shields.io/badge/100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/75%25-8A8A8A?style=flat-square" width="120"> |
 | _Fluência Total_ | _Business & Tech_ | _Comunicação Funcional_ |
 
 ---
