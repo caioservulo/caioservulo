@@ -13,7 +13,7 @@
       <span style="color: #666;">Read in English</span>
     </kbd>
   </a>
- <a href="README.pt.md">
+ <a href="README.md">
     <kbd>
       <span>🇧🇷</span> 
       <span style="color: #666;">Ler em Português</span>
