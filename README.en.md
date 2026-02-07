@@ -3,16 +3,16 @@
 ### 🚀 Product Manager | Data Product Owner | Product Strategist
 
 <div align="right">
+  <kbd>
+    <span>🇺🇸</span> 
+    <strong>Reading in English</strong>
+  </kbd>
   <a href="README.md">
     <kbd>
       <span>🇧🇷</span> 
       <span style="color: #666;">Ler em Português</span>
     </kbd>
   </a>
-  <kbd>
-    <span>🇺🇸</span> 
-    <strong>Reading in English</strong>
-  </kbd>
   <a href="README.es.md">
     <kbd>
       <span>🇪🇸</span> 
@@ -132,4 +132,36 @@ I have skills in product discovery, agile and Lean methodologies, data analysis 
 
 ### 📁 Success Stories
 
-Below are
+Below are some of the challenges I have led. You can access the full documentation for each case in the [`/cases`](./cases) folder.
+
+* **[Case 01: Customer Experience Management - Disruption](./cases/cx-paguemenos.md)**
+    * *Impact:* Highest service level, NPS, customer volume, and data visibility in the company's history.
+* **[Case 02: Data Pipeline Modernization](./cases/data-pipeline.md)**
+    * *Impact:* 60% increase in analysis accuracy and data democratization.
+* **[Case 03: Crisis Management and Rapid Build](./cases/bv-normativa.md)**
+    * *Impact:* Product validation (high fidelity) with zero engineering effort.
+* **[Case 04: New HR Product Development - Ecosystem Focus](./cases/produto-rh.md)**
+    * *Impact:* Product validation (high fidelity) with zero engineering effort.
+* **[Case 05: New Payment Gateway Product Development - Ecosystem Focus](./cases/produto-gateway.md)**
+    * *Impact:* Product validation with low engineering effort.
+* **[Case 06: Low Code Development - Household Management](./cases/financeiro-casa.md)**
+    * *Impact:* Management of family expenses with minimal effort.
+* **[Case 07: Pandemic and a Project that became a Product.](./cases/projeto-sas-pandemia.md)**
+    * *Impact:* Creation of a new product increasing lead generation by 43%.
+
+---
+
+### 📊 GitHub Stats
+
+![](https://komarev.com/ghpvc/?username=caioservulo&color=blue&style=flat-square&label=PROFILE+VISITS)
+
+---
+
+### 📫 Let's connect?
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/caioservulo)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:caiomelo22@gmail.com)
+
+---
+
+> "I love solving problems!"
