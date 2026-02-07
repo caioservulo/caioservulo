@@ -61,12 +61,12 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 ### 📜 Licenças e Certificações
 
-* 🚀 **Product Management** – PM3 | [🔗 Ver Credencial](LINK_AQUI)
-* 🛡️ **Scrum Foundation Professional Certificate (SFPC)** – Certiprof | [🔗 Ver Credencial](LINK_AQUI)
-* ⚙️ **Agile Project Management** – Mackenzie | [🔗 Ver Credencial](LINK_AQUI)
-* 📋 **Gestão de Projetos** – IEL | [🔗 Ver Credencial](LINK_AQUI)
-* ⚡ **Gestão Ágil de Projetos com Scrum** – SESI | [🔗 Ver Credencial](LINK_AQUI)
-* ⚪ **Lean Seis Sigma White Belt** – FM2S | [🔗 Ver Credencial](LINK_AQUI)
+* 🚀 **Product Management** – PM3 | [🔗 Ver Credencial](https://www.credential.net/e1fbddc4-cba0-44ef-9ec3-7b246201558d)
+* 🛡️ **Scrum Foundation Professional Certificate (SFPC)** – Certiprof | [🔗 Ver Credencial](https://drive.google.com/file/d/1qB0UQDDBQpM322lqgHf513MdbLfWrYxz/view?usp=sharing)
+* ⚙️ **Agile Project Management** – Mackenzie | [🔗 Ver Credencial](https://drive.google.com/file/d/1GMD0xfgv9xkxqxDS6UEm6GLi6uc7R6QL/view?usp=drivesdk)
+* 📋 **Gestão de Projetos** – IEL | [🔗 Ver Credencial](https://drive.google.com/file/d/19oI-L888KLsfx8SElUvxGj5yXp5kgj1h/view?usp=sharing)
+* ⚡ **Gestão Ágil de Projetos com Scrum** – SESI | [🔗 Ver Credencial](https://www.eadsesipr.org.br/loja/index.php?controller=authentication&back=my-account)
+* ⚪ **Lean Seis Sigma White Belt** – FM2S | [🔗 Ver Credencial](https://ead.fm2s.com.br/certificado/023089)
 
 ---
 
