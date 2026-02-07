@@ -72,4 +72,9 @@ Los resultados representan los mejores índices históricos de la compañía:
 - Sólida gestión de crisis y de personas, liderando múltiples coordinaciones y estructuras complejas.
 
 ---
-[⬅️ Volver al Perfil Principal](../README.es.md)
+<p align="center">
+  <br>
+  <a href="../../README.es.md">
+    <img src="https://img.shields.io/badge/%E2%AC%85%20VOLVER%20AL%20PERFIL%20PRINCIPAL%20%E2%AC%85-black?style=for-the-badge&logo=github&logoColor=white" width="400">
+  </a>
+</p>
