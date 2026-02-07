@@ -2,6 +2,27 @@
 
 ### 🚀 Product Manager | Data Product Owner | Estrategista de Produto
 
+<div align="right">
+  <kbd>
+    <span>🇧🇷</span> 
+    <strong>Lendo em Português</strong>
+  </kbd>
+  <a href="README.en.md">
+    <kbd>
+      <span>🇺🇸</span> 
+      <span style="color: #666;">Read in English</span>
+    </kbd>
+  </a>
+  <a href="README.es.md">
+    <kbd>
+      <span>🇪🇸</span> 
+      <span style="color: #666;">Leer en Español</span>
+    </kbd>
+  </a>
+</div>
+
+---
+
 <p align="center">
   <a href="#-sobre-mim"><img src="https://img.shields.io/badge/Sobre_Mim-000000?style=for-the-badge&logo=about.me&logoColor=white" /></a>
   <a href="#-idiomas"><img src="https://img.shields.io/badge/Idiomas-1A1A1A?style=for-the-badge&logo=translate&logoColor=white" /></a>
