@@ -72,4 +72,9 @@ The results represent the highest historical performance metrics for the company
 - Solid experience in crisis and people management, leading multiple coordinations and complex structures.
 
 ---
-[⬅️ Back to Main Profile](../caioservulo/README.en.md)
+<p align="center">
+  <br>
+  <a href="../../README.en.md">
+    <img src="https://img.shields.io/badge/%E2%AC%85%20BACK%20TO%20MAIN%20PROFILE%20%E2%AC%85-black?style=for-the-badge&logo=github&logoColor=white" width="400">
+  </a>
+</p>
