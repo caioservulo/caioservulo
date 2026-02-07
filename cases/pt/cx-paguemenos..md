@@ -13,8 +13,7 @@
 ### 🎯 Visão Geral
 - **Contexto:** [Ex: Plataforma SaaS de logística]
 - **Meu Papel:** Product Manager / Data PO
-- **Timeline:** [Ex: 3 meses]
-- **Stack/Ferramentas:** Power BI, SQL, Jira, Mixpanel.
+- **Timeline:*
 
 ---
 
