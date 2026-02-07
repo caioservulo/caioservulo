@@ -66,7 +66,7 @@ Poseo habilidades en Product Discovery, metodologías ágiles y Lean, análisis 
 | 🇧🇷 Portugués | 🇺🇸 Inglés | 🇪🇸 Español |
 | :---: | :---: | :---: |
 | **Nativo** | **Avanzado** | **Intermedio** |
-| <img src="https://img.shields.io/badge/---100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---75%25-8A8A8A?style=flat-square" width="120"> |
+| <img src="https://img.shields.io/badge/100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/75%25-8A8A8A?style=flat-square" width="120"> |
 | _Fluidez Total_ | _Business & Tech_ | _Comunicación Funcional_ |
 
 ---
