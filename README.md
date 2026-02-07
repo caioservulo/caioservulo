@@ -137,7 +137,7 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
 * **[Case 01: Gestão da Experiência do Cliente - disrupção](./cases/pt/cx-paguemenos.md)**
     * *Impacto:* Maior nível de serviço, NPS, volume de clientes atendidos e visibilidade de dados de clientes da história da empresa.
 * **[Case 02: Modernização de Pipeline de Dados](./cases/pt/data-pipeline.md)**
-    * *Impacto:* AUmento da assertividade de análises em 60% e democratização de dados.
+    * *Impacto:* Aumento da assertividade de análises em 60% e democratização de dados.
 * **[Case 03: Gestão de crise e construção rápida](./cases/pt/bv-normativa.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
 * **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/pt/produto-rh.md)**
