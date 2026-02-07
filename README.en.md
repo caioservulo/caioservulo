@@ -134,20 +134,16 @@ I have skills in product discovery, agile and Lean methodologies, data analysis 
 
 Below are some of the challenges I have led. You can access the full documentation for each case in the [`/cases`](./cases) folder.
 
-* **[Case 01: Customer Experience Management - Disruption](./cases/pt/cx-paguemenos.md)**
+* **[Case 01: Customer Experience Management - Disruption](./cases/en/cx-paguemenos.md)**
     * *Impact:* Highest service level, NPS, customer volume, and data visibility in the company's history.
-* **[Case 02: Data Pipeline Modernization](./cases/pt/data-pipeline.md)**
+* **[Case 02: Data Pipeline Modernization](./cases/en/data-pipeline.md)**
     * *Impact:* 60% increase in analysis accuracy and data democratization.
-* **[Case 03: Crisis Management and Rapid Build](./cases/pt/bv-normativa.md)**
+* **[Case 03: Crisis Management and Rapid Build](./cases/en/bv-normativa.md)**
     * *Impact:* Product validation (high fidelity) with zero engineering effort.
-* **[Case 04: New HR Product Development - Ecosystem Focus](./cases/pt/produto-rh.md)**
+* **[Case 04: New HR Product Development - Ecosystem Focus](./cases/en/produto-rh.md)**
     * *Impact:* Product validation (high fidelity) with zero engineering effort.
-* **[Case 05: New Payment Gateway Product Development - Ecosystem Focus](./cases/pt/produto-gateway.md)**
-    * *Impact:* Product validation with low engineering effort.
-* **[Case 06: Low Code Development - Household Management](./cases/pt/financeiro-casa.md)**
-    * *Impact:* Management of family expenses with minimal effort.
-* **[Case 07: Pandemic and a Project that became a Product.](./cases/pt/projeto-sas-pandemia.md)**
-    * *Impact:* Creation of a new product increasing lead generation by 43%.
+* **[Case 05: Pandemic and a Project that became a Product.](./cases/en/projeto-sas-pandemia.md)**
+    * *Impact:* Creation of a new product, increasing the customer retention rate by 95%.
 
 ---
 
