@@ -72,4 +72,9 @@ Os números refletem a maior eficiência histórica da companhia no setor de ate
 - **Visão de Produto:** Atuar como PM no CRM interno permitiu que o produto fosse desenhado exatamente para a dor da operação, evitando desperdício de desenvolvimento.
 
 ---
-[⬅️ Voltar para o Perfil Principal](../README.md)
+<p align="center">
+  <br>
+  <a href="../../README.md">
+    <img src="https://img.shields.io/badge/%E2%AC%85%20VOLTAR%20AO%20PERFIL%20PRINCIPAL%20%E2%AC%85-black?style=for-the-badge&logo=github&logoColor=white" width="400">
+  </a>
+</p>
