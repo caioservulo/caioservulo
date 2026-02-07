@@ -5,13 +5,13 @@
     <span>🇺🇸</span> 
     <strong>Reading in English</strong>
   </kbd>
-  <a href="./cases/pt/cx-paguemenos.md">
+  <a href="../pt/cx-paguemenos.md">
     <kbd>
       <span>🇧🇷</span> 
       <span style="color: #666;">Ler em Português</span>
     </kbd>
   </a>
-  <a href="./cases/es/cx-paguemenos.md">
+  <a href="../es/cx-paguemenos.md">
     <kbd>
       <span>🇪🇸</span> 
       <span style="color: #666;">Leer en Español</span>
