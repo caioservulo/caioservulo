@@ -64,7 +64,7 @@ I have skills in product discovery, agile and Lean methodologies, data analysis 
 | 🇧🇷 Portuguese | 🇺🇸 English | 🇪🇸 Spanish |
 | :---: | :---: | :---: |
 | **Native** | **Advanced** | **Intermediate** |
-| <img src="https://img.shields.io/badge/---100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---65%25-8A8A8A?style=flat-square" width="120"> |
+| <img src="https://img.shields.io/badge/100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/75%25-8A8A8A?style=flat-square" width="120"> |
 | _Full Fluency_ | _Business & Tech_ | _Functional Communication_ |
 
 ---
