@@ -75,7 +75,7 @@ SQL & ETL         ██████████████████▒▒�
 ```
 
 ```mermaid
-gantt
+bars
     title Nível de Especialidade
     dateFormat  X
     axisFormat %
