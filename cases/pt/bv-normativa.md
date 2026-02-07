@@ -5,13 +5,13 @@
     <span>🇧🇷</span> 
     <strong>Lendo em Português</strong>
   </kbd>
-  <a href="../en/normativa.md">
+  <a href="../en/bv-normativa.md">
     <kbd>
       <span>🇺🇸</span> 
       <span style="color: #666;">Read in English</span>
     </kbd>
   </a>
-  <a href="../es/normativa.md">
+  <a href="../es/bv-normativa.md">
     <kbd>
       <span>🇪🇸</span> 
       <span style="color: #666;">Leer en Español</span>
