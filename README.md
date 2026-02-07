@@ -54,7 +54,9 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
 
 ### 📊 GitHub Stats
 
-![Status do meu GitHub](https://github-readme-stats.vercel.app/api?username=caioservulo&show_icons=true&theme=radical)
+![](https://komarev.com/ghpvc/?username=caioservulo&color=blue&style=flat-square&label=VISITAS+AO+PERFIL)
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=caioservulo&theme=radical)](https://git.io/streak-stats)
 
 ---
 
