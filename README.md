@@ -40,36 +40,11 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 ### 🌐 Idiomas
 
-![Português](https://img.shields.io/badge/Português-Nativo-brightgreen?style=for-the-badge)
-![Inglês](https://img.shields.io/badge/Inglês-Avançado-blue?style=for-the-badge)
-![Espanhol](https://img.shields.io/badge/Espanhol-Intermediário-orange?style=for-the-badge)
-
----
-
-### 🌐 Idiomas
-
-<table border="0">
-  <tr>
-    <td width="33%" align="center">
-      <img src="https://raw.githubusercontent.com/lucasbento/lucasbento/master/assets/brazil-flag.png" width="30px"/><br/>
-      <strong>Português</strong><br/>
-      <sub>Nativo</sub><br/>
-      <img src="https://geps.dev/progress/100?dangerColor=333333&warningColor=333333&successColor=000000" width="100">
-    </td>
-    <td width="33%" align="center">
-      <img src="https://raw.githubusercontent.com/lucasbento/lucasbento/master/assets/us-flag.png" width="30px"/><br/>
-      <strong>Inglês</strong><br/>
-      <sub>Avançado / Fluente</sub><br/>
-      <img src="https://geps.dev/progress/90?dangerColor=333333&warningColor=333333&successColor=000000" width="100">
-    </td>
-    <td width="33%" align="center">
-      <img src="https://raw.githubusercontent.com/lucasbento/lucasbento/master/assets/spain-flag.png" width="30px"/><br/>
-      <strong>Espanhol</strong><br/>
-      <sub>Intermediário</sub><br/>
-      <img src="https://geps.dev/progress/65?dangerColor=333333&warningColor=333333&successColor=000000" width="100">
-    </td>
-  </tr>
-</table>
+| 🇧🇷 Português | 🇺🇸 Inglês | 🇪🇸 Espanhol |
+| :---: | :---: | :---: |
+| **Nativo** | **Avançado** | **Intermediário** |
+| <img src="https://img.shields.io/badge/---100%25-000000?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---90%25-454545?style=flat-square" width="120"> | <img src="https://img.shields.io/badge/---65%25-8A8A8A?style=flat-square" width="120"> |
+| _Fluência Total_ | _Business & Tech_ | _Comunicação Funcional_ |
 
 ---
 
@@ -146,11 +121,11 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
 * **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/produto-rh.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
-* **[Case 04: Desenvolvimento de novo produto de gateway de pagamentos - foco no ecossistema](./cases/produto-gateway.md)**
+* **[Case 05: Desenvolvimento de novo produto de gateway de pagamentos - foco no ecossistema](./cases/produto-gateway.md)**
     * *Impacto:* Validação de produto com baixo esforço do time de engenharia.
-* **[Case 05: Desenvolvimento low code - gestão de casa](./cases/financeiro-casa.md)**
+* **[Case 06: Desenvolvimento low code - gestão de casa](./cases/financeiro-casa.md)**
     * *Impacto:*Gestão de gastos familiares com mesno esforço.
-* **[Case 06: Pandemia e um projeto que virou produto.](./cases/projeto-sas-pandemia.md)**
+* **[Case 07: Pandemia e um projeto que virou produto.](./cases/projeto-sas-pandemia.md)**
     * *Impacto:* Criação de novo produto aumentando o volume de leads captados em 43%.
 
 ---
