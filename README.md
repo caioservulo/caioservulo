@@ -52,10 +52,10 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 | Instituição | Curso | Período | Status |
 | :--- | :--- | :--- | :--- |
-| **BBI - Business Behavior Institute** | MBA, Product Management, IT | 2022 — 2024 | [📜 Certificado](LINK_AQUI) |
-| **Descomplica** | MBA em Gestão Estratégica de Projetos e Metodologias Ágeis | 2020 — 2021 | [📜 Certificado](LINK_AQUI) |
-| **Descomplica** | MBA em Gestão da Qualidade | 2020 — 2021 | [📜 Certificado](LINK_AQUI) |
-| **UFC** | Barachelado em Enganharia de Pesca | 2014 — 2019 | [📜 Certificado](LINK_AQUI) |
+| **BBI - Business Behavior Institute** | MBA, Product Management, IT | 2022 — 2024 | [📜 Certificado](https://drive.google.com/file/d/1SkSevq-x-1pzyz_OWqxXEMYq99YUX1m6/view?usp=share_link) |
+| **Descomplica** | MBA em Gestão Estratégica de Projetos e Metodologias Ágeis | 2020 — 2021 | [📜 Certificado](https://drive.google.com/file/d/10VMzkd_1QlN1vq-OX0lKLsUSS3YukTpj/view?usp=share_link) |
+| **Descomplica** | MBA em Gestão da Qualidade | 2020 — 2021 | [📜 Certificado](https://drive.google.com/file/d/10MAEi4bezmeTezgoSIvcFbp9f4EdXy87/view?usp=share_link) |
+| **UFC** | Barachelado em Enganharia de Pesca | 2014 — 2019 | [📜 Certificado](https://drive.google.com/file/d/18ggxuzLvBO0C4Jl3aEABrTvj38rUQzi2/view?usp=share_link) |
 
 ---
 
