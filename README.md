@@ -132,7 +132,7 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 ### 📁 Cases de Sucesso
 
-Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentação completa de cada case na pasta [`/cases`](./cases).
+Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentação completa de cada case na pasta [`/cases`](./pt/cases).
 
 * **[Case 01: Gestão da Experiência do Cliente - disrupção](./cases/pt/cx-paguemenos.md)**
     * *Impacto:* Maior nível de serviço, NPS, volume de clientes atendidos e visibilidade de dados de clientes da história da empresa.
