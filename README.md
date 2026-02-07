@@ -53,16 +53,16 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
 ### 📊 Skills & Proficiency
 
 **Product Strategy**
-![](https://geps.dev/progress/95?dangerColor=800080&warningColor=4B0082&successColor=6a0dad) 95%
+![](https://geps.dev/progress/95?dangerColor=800080&warningColor=4B0082&successColor=68E070) 95%
 
 **Data Analytics**
-![](https://geps.dev/progress/90?dangerColor=800080&warningColor=4B0082&successColor=6a0dad) 90%
+![](https://geps.dev/progress/90?dangerColor=800080&warningColor=4B0082&successColor=68E070) 90%
 
 **Agile Leadership**
-![](https://geps.dev/progress/85?dangerColor=800080&warningColor=4B0082&successColor=6a0dad) 85%
+![](https://geps.dev/progress/85?dangerColor=800080&warningColor=4B0082&successColor=68E070) 85%
 
 **Technical Understanding**
-![](https://geps.dev/progress/75?dangerColor=800080&warningColor=4B0082&successColor=6a0dad) 75%
+![](https://geps.dev/progress/75?dangerColor=800080&warningColor=4B0082&successColor=68E070) 75%
 
 ### 📈 Competências Técnicas
 
@@ -71,6 +71,8 @@ Product Vision    ████████████████████�
 Data Driven       ███████████████████████▒▒▒ 90%
 Stakeholder Mgmt  ████████████████████▒▒▒▒▒ 80%
 SQL & ETL         ██████████████████▒▒▒▒▒▒▒ 70%
+
+```
 
 ```mermaid
 gantt
