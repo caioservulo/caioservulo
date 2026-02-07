@@ -142,11 +142,7 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
 * **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/pt/produto-rh.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
-* **[Case 05: Desenvolvimento de novo produto de gateway de pagamentos - foco no ecossistema](./cases/pt/produto-gateway.md)**
-    * *Impacto:* Validação de produto com baixo esforço do time de engenharia.
-* **[Case 06: Desenvolvimento low code - gestão de casa](./cases/pt/financeiro-casa.md)**
-    * *Impacto:*Gestão de gastos familiares com mesno esforço.
-* **[Case 07: Pandemia e um projeto que virou produto.](./cases/pt/projeto-sas-pandemia.md)**
+* **[Case 05: Pandemia e um projeto que virou produto.](./cases/pt/projeto-sas-pandemia.md)**
     * *Impacto:* Criação de novo produto aumentando o volume de leads captados em 43%.
 
 ---
