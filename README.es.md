@@ -134,7 +134,7 @@ Poseo habilidades en Product Discovery, metodologías ágiles y Lean, análisis 
 
 ### 📁 Casos de Éxito
 
-A continuación se presentan algunos de los desafíos que he liderado. Puedes acceder a la documentación completa de cada caso en la carpeta [`/cases`](./cases).
+A continuación se presentan algunos de los desafíos que he liderado. Puedes acceder a la documentación completa de cada caso en la carpeta [`/cases`](./cases/es).
 
 * **[Caso 01: Gestión de la Experiencia del Cliente - Disrupción](./cases/es/cx-paguemenos.md)**
     * *Impacto:* Mayor nivel de servicio, NPS, volumen de clientes atendidos y visibilidad de datos de clientes en la historia de la empresa.
