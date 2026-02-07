@@ -134,19 +134,19 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentação completa de cada case na pasta [`/cases`](./cases).
 
-* **[Case 01: Gestão da Experiência do Cliente - disrupção](./cases/cx-paguemenos.md)**
+* **[Case 01: Gestão da Experiência do Cliente - disrupção](./cases/pt/cx-paguemenos.md)**
     * *Impacto:* Maior nível de serviço, NPS, volume de clientes atendidos e visibilidade de dados de clientes da história da empresa.
-* **[Case 02: Modernização de Pipeline de Dados](./cases/data-pipeline.md)**
+* **[Case 02: Modernização de Pipeline de Dados](./cases/pt/data-pipeline.md)**
     * *Impacto:* AUmento da assertividade de análises em 60% e democratização de dados.
-* **[Case 03: Gestão de crise e construção rápida](./cases/bv-normativa.md)**
+* **[Case 03: Gestão de crise e construção rápida](./cases/pt/bv-normativa.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
-* **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/produto-rh.md)**
+* **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/pt/produto-rh.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
-* **[Case 05: Desenvolvimento de novo produto de gateway de pagamentos - foco no ecossistema](./cases/produto-gateway.md)**
+* **[Case 05: Desenvolvimento de novo produto de gateway de pagamentos - foco no ecossistema](./cases/pt/produto-gateway.md)**
     * *Impacto:* Validação de produto com baixo esforço do time de engenharia.
-* **[Case 06: Desenvolvimento low code - gestão de casa](./cases/financeiro-casa.md)**
+* **[Case 06: Desenvolvimento low code - gestão de casa](./cases/pt/financeiro-casa.md)**
     * *Impacto:*Gestão de gastos familiares com mesno esforço.
-* **[Case 07: Pandemia e um projeto que virou produto.](./cases/projeto-sas-pandemia.md)**
+* **[Case 07: Pandemia e um projeto que virou produto.](./cases/pt/projeto-sas-pandemia.md)**
     * *Impacto:* Criação de novo produto aumentando o volume de leads captados em 43%.
 
 ---
