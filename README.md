@@ -4,11 +4,12 @@
 
 <p align="center">
   <a href="#-sobre-mim">Sobre Mim</a> •
-  <a href="#-skills--proficiency">Habilidades</a> •
-  <a href="#-cases-de-sucesso">Cases</a> •
+  <a href="#-idiomas">Idiomas</a> •
   <a href="#-formação-acadêmica">Formação</a> •
   <a href="#-licenças-e-certificações">Certificações</a> •
-  <a href="#-idiomas">Idiomas</a> •
+  <a href="#-toolkit-de-produto">Toolkit de Produto</a> •
+  <a href="#-skills-&-proficiency">Habilidades</a> •
+  <a href="#-cases-de-sucesso">Cases</a> •
   <a href="#-vamos-conectar">Contato</a>
 </p>
 
@@ -91,7 +92,7 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 ---
 
-### 📁 Cases de Sucesso (Portfólio Detalhado)
+### 📁 Cases de Sucesso
 
 Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentação completa de cada case na pasta [`/cases`](./cases).
 
