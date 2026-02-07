@@ -132,7 +132,7 @@ I have skills in product discovery, agile and Lean methodologies, data analysis 
 
 ### 📁 Success Stories
 
-Below are some of the challenges I have led. You can access the full documentation for each case in the [`/cases`](./cases) folder.
+Below are some of the challenges I have led. You can access the full documentation for each case in the [`/cases`](./cases/en) folder.
 
 * **[Case 01: Customer Experience Management - Disruption](./cases/en/cx-paguemenos.md)**
     * *Impact:* Highest service level, NPS, customer volume, and data visibility in the company's history.
