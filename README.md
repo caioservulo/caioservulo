@@ -67,7 +67,7 @@ Tenho habilidades em descoberta de produtos, metodologias ágeis e Lean, anális
 
 ---
 
-### 🛠️ Toolkit de Produto
+### 🔧 Toolkit de Produto
 
 | Categoria | Ferramentas / Metodologias |
 | :--- | :--- |
