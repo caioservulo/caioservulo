@@ -1,20 +1,20 @@
 # Case: Gestión de crisis y construcción rápida
 
 <div align="right">
-  <kbd>
-    <span>🇺🇸</span> 
-    <strong>Reading in English</strong>
+    <kbd>
+      <span>🇪🇸</span> 
+      <strong>Leyendo en Español</strong>
   </kbd>
-  <a href="../pt/bv-normativa.md">
+  <a href="../en/bv-normativa.md">
+    <kbd>
+      <span>🇺🇸</span> 
+      <span style="color: #666;">Read in English</span>
+    </kbd>
+  </a>
+ <a href="../pt/bv-normativa.md">
     <kbd>
       <span>🇧🇷</span> 
       <span style="color: #666;">Ler em Português</span>
-    </kbd>
-  </a>
-  <a href="../es/bv-normativa.md">
-    <kbd>
-      <span>🇪🇸</span> 
-      <span style="color: #666;">Leer en Español</span>
     </kbd>
   </a>
 </div>
@@ -72,7 +72,7 @@
 ---
 <p align="center">
   <br>
-  <a href="../../README.en.md">
-    <img src="https://img.shields.io/badge/%E2%AC%85%20BACK%20TO%20MAIN%20PROFILE%20%E2%AC%85-black?style=for-the-badge&logo=github&logoColor=white" width="400">
+  <a href="../../README.es.md">
+    <img src="https://img.shields.io/badge/%E2%AC%85%20VOLVER%20AL%20PERFIL%20PRINCIPAL%20%E2%AC%85-black?style=for-the-badge&logo=github&logoColor=white" width="400">
   </a>
 </p>
