@@ -143,7 +143,7 @@ Abaixo estão alguns dos desafios que liderei. Você pode acessar a documentaç�
 * **[Case 04: Desenvolvimento de novo produto de RH - foco no ecossistema](./cases/pt/produto-rh.md)**
     * *Impacto:* Validação de produto (em alta fidelidade) com zero esforço do time de engenharia.
 * **[Case 05: Pandemia e um projeto que virou produto.](./cases/pt/projeto-sas-pandemia.md)**
-    * *Impacto:* Criação de novo produto aumentando o volume de renovações em 95%.
+    * *Impacto:* Criação de novo produto aumentando a taxa de retenção de clientes em 95%.
 
 ---
 
