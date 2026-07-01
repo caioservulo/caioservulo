@@ -32,7 +32,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F8EF7'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial' font-weight='800' font-size='14' fill='white'%3ECS%3C/text%3E%3C/svg%3E" />
   <link rel="alternate icon" type="image/png" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/avatar.jpg" />
-  <meta name="theme-color" content="#0D1117" />
+  <meta name="theme-color" content="#F6F8FA" />
 
   <!-- ── GOOGLE ANALYTICS 4 ── -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX7NHM6BFC"></script>
@@ -49,15 +49,15 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg:#0D1117; --bg2:#161B22; --bg3:#1C2330;
-      --border:#30363D; --text:#E6EDF3; --muted:#8B949E;
-      --accent:#4F8EF7; --green:#3FB950; --radius:8px;
-      --sidebar-w:260px; --topbar-h:46px;
-    }
-    html.light {
       --bg:#F6F8FA; --bg2:#FFFFFF; --bg3:#F0F2F5;
       --border:#D0D7DE; --text:#1F2328; --muted:#656D76;
       --accent:#0969DA; --green:#1A7F37;
+      --radius:8px; --sidebar-w:260px; --topbar-h:46px;
+    }
+    html.dark {
+      --bg:#0D1117; --bg2:#161B22; --bg3:#1C2330;
+      --border:#30363D; --text:#E6EDF3; --muted:#8B949E;
+      --accent:#4F8EF7; --green:#3FB950;
     }
     html { scroll-behavior:smooth; }
     body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:15px; line-height:1.6; min-height:100vh; transition: background .25s, color .25s; }
@@ -245,7 +245,108 @@
       white-space:nowrap;
     }
 
-    /* ── EXPERIENCE ── */
+    /* ── SCROLL PROGRESS BAR ── */
+    .scroll-bar { position:fixed; top:var(--topbar-h); left:0; height:3px; background:var(--accent); width:0%; z-index:400; transition:width .1s linear; border-radius:0 2px 2px 0; }
+
+    /* ── HERO CONTACTS ── */
+    .hero-contacts { display:flex; flex-wrap:wrap; gap:14px; margin:10px 0 20px; }
+    .hero-contact-link { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--muted); text-decoration:none; font-family:'JetBrains Mono',monospace; transition:color .2s; }
+    .hero-contact-link:hover { color:var(--accent); }
+    .hero-contact-link svg { flex-shrink:0; }
+
+    /* ── OPEN TO WORK BADGE ── */
+    .otw-badge { display:inline-flex; align-items:center; gap:6px; padding:4px 11px; border-radius:20px; background:rgba(63,185,80,.12); border:1px solid rgba(63,185,80,.35); font-size:11px; font-weight:600; color:var(--green); margin-top:4px; }
+    .otw-dot { width:7px; height:7px; border-radius:50%; background:var(--green); animation:pulse-dot 2s ease-in-out infinite; flex-shrink:0; }
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
+
+    /* ── LOOKING FOR SECTION ── */
+    .looking-card { background:linear-gradient(135deg, rgba(79,142,247,.08), rgba(63,185,80,.06)); border:1px solid rgba(79,142,247,.25); border-radius:var(--radius); padding:22px 26px; }
+    .looking-text { font-size:14px; color:var(--text); line-height:1.8; margin-bottom:16px; }
+    .looking-text strong { color:var(--accent); }
+    .looking-chips { display:flex; flex-wrap:wrap; gap:8px; }
+    .looking-chip { display:inline-flex; align-items:center; gap:6px; padding:5px 13px; border-radius:20px; background:var(--bg3); border:1px solid var(--border); font-size:12px; color:var(--text); font-weight:500; }
+    .looking-chip svg { color:var(--accent); flex-shrink:0; }
+
+    /* ── DOWNLOAD CV BUTTON ── */
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up { opacity:0; transform:translateY(22px); transition:opacity .45s ease, transform .45s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+
+    /* stagger children */
+    .fade-up:nth-child(2) { transition-delay:.07s; }
+    .fade-up:nth-child(3) { transition-delay:.14s; }
+    .fade-up:nth-child(4) { transition-delay:.21s; }
+
+    /* ── PRINT / PDF ── */
+    @media print {
+      * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+      /* hide everything UI */
+      .topbar, aside, .scroll-bar, .bottom-nav, .lightbox,
+      .hero-bullets, .tag-row, .looking-card,
+      .case-card, #cases, .lang-grid,
+      .nav-group, .s-links, .otw-badge { display:none !important; }
+
+      /* reset layout */
+      html, body { background:#fff !important; color:#111 !important; font-size:11pt; }
+      html.light, html { --bg:#fff; --bg2:#fff; --bg3:#f5f5f5; --border:#ddd; --text:#111; --muted:#555; --accent:#0969DA; --green:#1A7F37; }
+      .shell { display:block; padding:0; }
+      main { padding:0; max-width:100%; }
+
+      /* print header */
+      .hero { margin-bottom:18pt; page-break-after:avoid; }
+      .hero-name { font-size:22pt; color:#111 !important; -webkit-text-fill-color:#111 !important; background:none !important; margin-bottom:4pt; }
+      .hero-title { font-size:11pt; color:#0969DA; margin-bottom:6pt; }
+      .hero-contacts { gap:18pt; margin:6pt 0 0; }
+      .hero-contact-link { font-size:9pt; color:#555; }
+      .eyebrow { display:none; }
+
+      /* sections */
+      section { margin-bottom:14pt; page-break-inside:avoid; }
+      .sec-title { font-size:13pt; color:#111; border-bottom:1.5pt solid #0969DA; padding-bottom:4pt; margin-bottom:8pt; }
+      .sec-icon { display:none; }
+      .sec-header { margin-bottom:6pt; }
+
+      /* skills: 3 col */
+      .skills-grid { grid-template-columns:repeat(3,1fr); gap:6pt; }
+      .skill-item { background:#f5f5f5; border:1pt solid #ddd; padding:6pt 8pt; }
+      .skill-name { font-size:9pt; }
+      .skill-bar-bg { height:3pt; }
+      .skill-pct { font-size:8pt; }
+      .toolkit-row { margin-bottom:5pt; }
+      .tk-label { font-size:9pt; width:110pt; }
+      .stack-tag { font-size:8pt; padding:1pt 6pt; }
+
+      /* experience */
+      .exp-item { gap:10pt; margin-bottom:10pt; }
+      .exp-item:not(:last-child)::before { display:none; }
+      .exp-logo { width:28pt; height:28pt; font-size:8pt; }
+      .exp-role { font-size:11pt; }
+      .exp-company { font-size:9pt; }
+      .exp-period { font-size:8pt; }
+      .exp-desc { font-size:9pt; }
+      .exp-tags { display:none; }
+      .exp-badge { font-size:7pt; padding:1pt 5pt; }
+
+      /* education */
+      .data-table { font-size:9pt; }
+      .data-table th { font-size:8pt; padding:4pt 8pt; }
+      .data-table td { padding:4pt 8pt; }
+
+      /* certs */
+      .card { background:#f5f5f5; border:1pt solid #ddd; padding:8pt 10pt; }
+      .card ul li { font-size:9pt; }
+
+      /* vol */
+      .card-title { font-size:10pt; }
+      .card-meta { font-size:8pt; }
+      .card-desc { font-size:9pt; }
+
+      /* contact */
+      .contact-btn { display:none !important; }
+      #quote-line { font-size:8pt; color:#888; }
+    }
     .exp-item { display:flex; gap:16px; margin-bottom:24px; position:relative; }
     .exp-item:not(:last-child)::before { content:''; position:absolute; left:19px; top:42px; bottom:-24px; width:1px; background:var(--border); }
     .exp-logo { width:38px; height:38px; border-radius:8px; background:var(--bg3); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; font-weight:700; font-family:'JetBrains Mono',monospace; color:var(--accent); }
@@ -442,11 +543,13 @@
     <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
     <div class="topbar-divider"></div>
     <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme" aria-label="Toggle light/dark mode">
-      <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-      <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
   </div>
 </div>
+
+<div class="scroll-bar" id="scroll-bar"></div>
 
 <div class="shell">
 
@@ -462,6 +565,7 @@
       </div>
       <div class="s-name">Caio Servulo</div>
       <div class="s-role" id="s-role">Product Manager</div>
+      <div class="otw-badge"><span class="otw-dot"></span><span id="otw-label">Aberto a oportunidades</span></div>
       <div class="s-loc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Valladolid, ES</div>
     </div>
 
@@ -490,20 +594,20 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         <span id="nav-edu">Educacao</span>
       </button>
-      <button class="nav-item" onclick="navTo('exp',this)">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-        <span id="nav-exp">Experiencia</span>
-      </button>
       <button class="nav-item" onclick="navTo('skills',this)">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         <span id="nav-skills">Skills</span>
+      </button>
+      <button class="nav-item" onclick="navTo('exp',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        <span id="nav-exp">Experiencia</span>
       </button>
       <button class="nav-item" onclick="navTo('vol',this)">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         <span id="nav-vol">Voluntariado</span>
       </button>
       <button class="nav-item" onclick="navTo('cases',this)">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
         <span id="nav-cases">Cases</span>
       </button>
       <button class="nav-item" onclick="navTo('contact',this)">
@@ -520,7 +624,21 @@
     <div class="hero" id="about">
       <div class="eyebrow" id="hero-eyebrow">// product manager &amp; data strategist</div>
       <h1 class="hero-name">Caio Servulo</h1>
-      <div class="hero-title">Product Manager &middot; Data Product Owner &middot; CX Strategist</div>
+      <div class="hero-title">Product Manager &middot; Data Product Owner &middot; Business Analyst</div>
+      <div class="hero-contacts">
+        <a href="https://linkedin.com/in/caioservulo" target="_blank" class="hero-contact-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          caioservulo
+        </a>
+        <a href="mailto:caiomelo22@gmail.com" class="hero-contact-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          caiomelo22@gmail.com
+        </a>
+        <span class="hero-contact-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Valladolid, ES
+        </span>
+      </div>
       <p class="hero-bio" id="hero-bio">Sou um Product Manager com experiencia em analise de dados, growth e customer experience. Liderei iniciativas de produtos digitais em fintech, SaaS e varejo, desenvolvendo solucoes escalaveis e orientadas a dados que geram impacto mensuravel nos negocios. Minha experiencia conecta estrategia, tecnologia e necessidades do cliente.</p>
       <ul class="hero-bullets">
         <li>
@@ -657,6 +775,8 @@
         <div class="skill-item"><div class="skill-name">Team Management</div><div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
         <div class="skill-item"><div class="skill-name">Data Analytics</div><div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
         <div class="skill-item"><div class="skill-name">AI &amp; Prompt Engineering</div><div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
+        <div class="skill-item"><div class="skill-name">AI Product Strategy</div><div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div><div class="skill-pct">75%</div></div>
+        <div class="skill-item"><div class="skill-name">AI Workflow Automation</div><div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div><div class="skill-pct">75%</div></div>
       </div>
       <div style="margin-top:30px;">
         <div class="sec-header" style="margin-bottom:16px;"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3 class="sec-title" style="font-size:17px;" id="s-toolkit">Toolkit de Produto</h3></div>
@@ -665,14 +785,6 @@
         <div class="toolkit-row"><span class="tk-label" id="tk3">Automacao</span><div class="case-stack"><span class="stack-tag">n8n</span><span class="stack-tag">Alteryx</span></div></div>
         <div class="toolkit-row"><span class="tk-label" id="tk4">Frameworks</span><div class="case-stack"><span class="stack-tag">Scrum</span><span class="stack-tag">Kanban</span><span class="stack-tag">JTBD</span><span class="stack-tag">OKRs</span><span class="stack-tag">Lean Inception</span></div></div>
       </div>
-    </section>
-
-<!-- VOLUNTARIADO -->
-    <section id="vol">
-      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h2 class="sec-title" id="s-vol">Trabalho Voluntario</h2></div>
-      <div class="card"><div class="card-title">Pipoca Agil &#8212; Product Owner</div><div class="card-meta">Jul 2025 &#8212; <span id="v-present">Presente</span></div><p class="card-desc" id="v-pipoca">Lideranca da evolucao da plataforma da comunidade, priorizacao de backlog e facilitacao de rituais ageis para disseminacao de conhecimento.</p></div>
-      <div class="card"><div class="card-title">FEJECE &#8212; Board Member</div><div class="card-meta">Dez 2018 &#8212; Jun 2019</div><p class="card-desc" id="v-fejece">Atuacao no Conselho Consultivo da Federacao de Empresas Juniores, apoiando a estrategia de crescimento e governanca das empresas juniores do Ceara.</p></div>
-      <div class="card"><div class="card-title">CORAq &#8212; CEO</div><div class="card-meta">Jun 2018 &#8212; Jun 2019</div><p class="card-desc" id="v-coraq">Lideranca executiva da empresa junior, focada em estrategia de vendas, cultura organizacional e entrega de projetos de consultoria tecnica.</p></div>
     </section>
 
 <!-- EXPERIENCIA -->
@@ -780,6 +892,14 @@
 
     </section>
 
+<!-- VOLUNTARIADO -->
+    <section id="vol">
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h2 class="sec-title" id="s-vol">Trabalho Voluntario</h2></div>
+      <div class="card"><div class="card-title">Pipoca Agil &#8212; Product Owner</div><div class="card-meta">Jul 2025 &#8212; <span id="v-present">Presente</span></div><p class="card-desc" id="v-pipoca">Lideranca da evolucao da plataforma da comunidade, priorizacao de backlog e facilitacao de rituais ageis para disseminacao de conhecimento.</p></div>
+      <div class="card"><div class="card-title">FEJECE &#8212; Board Member</div><div class="card-meta">Dez 2018 &#8212; Jun 2019</div><p class="card-desc" id="v-fejece">Atuacao no Conselho Consultivo da Federacao de Empresas Juniores, apoiando a estrategia de crescimento e governanca das empresas juniores do Ceara.</p></div>
+      <div class="card"><div class="card-title">CORAq &#8212; CEO</div><div class="card-meta">Jun 2018 &#8212; Jun 2019</div><p class="card-desc" id="v-coraq">Lideranca executiva da empresa junior, focada em estrategia de vendas, cultura organizacional e entrega de projetos de consultoria tecnica.</p></div>
+    </section>
+
 <!-- CASES -->
     <section id="cases">
       <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg></div><h2 class="sec-title" id="s-cases">Cases de Sucesso</h2></div>
@@ -788,9 +908,19 @@
 
 <!-- CONTATO -->
     <section id="contact">
-      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div><h2 class="sec-title" id="s-contact">Vamos conectar?</h2></div>
-      <p style="color:var(--muted);font-size:14px;margin-bottom:22px;" id="contact-desc">Aberto a oportunidades de Product Manager, Product Owner ou Business Analyst no mercado europeu.</p>
-      <div>
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div><h2 class="sec-title" id="s-contact">Vamos conectar?</h2></div>
+
+      <div class="looking-card" style="margin-bottom:24px;">
+        <p class="looking-text" id="looking-text">Busco oportunidades como <strong>Product Manager, Product Owner ou Business Analyst</strong> em empresas de tecnologia, fintechs, startups ou consultorias &mdash; onde produto e dados andam juntos e decisoes sao tomadas com evidencia, nao intuicao.<br><br>Trabalho bem em times multidisciplinares, ambientes ageis e contextos que exigem clareza onde ha caos. Aberto a modelos remoto, hibrido ou presencial na Espanha.</p>
+        <div class="looking-chips">
+          <span class="looking-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg><span id="chip-role">PM &middot; PO &middot; Business Analyst</span></span>
+          <span class="looking-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20"/></svg><span id="chip-loc">Remoto &middot; Hibrido &middot; Espanha</span></span>
+          <span class="looking-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span id="chip-sector">Tech &middot; Fintech &middot; Startup &middot; Consultoria</span></span>
+        </div>
+      </div>
+
+      <p style="color:var(--muted);font-size:14px;margin-bottom:18px;" id="contact-desc">Aberto a oportunidades de Product Manager, Product Owner ou Business Analyst no mercado europeu.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:20px;">
         <a href="https://linkedin.com/in/caioservulo" target="_blank" class="contact-btn primary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
@@ -803,8 +933,9 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
           GitHub
         </a>
+
       </div>
-      <p style="margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);" id="quote-line">// "Gosto de resolver problemas!"</p>
+      <p style="margin-top:4px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);" id="quote-line">// "Gosto de resolver problemas!"</p>
     </section>
 
   </main>
@@ -1011,9 +1142,9 @@ images:[],labels:{ctx:"Contexto &amp; Rol",stk:"Stack &amp; Herramientas",ch:"El
 
 // ─── UI STRINGS ───────────────────────────────────────────────────────────────
 var UI={
-pt:{"hero-eyebrow":"// product manager & data strategist","hero-bio":"Sou um Product Manager com experiencia em analise de dados, growth e customer experience. Liderei iniciativas de produtos digitais em fintech, SaaS e varejo, desenvolvendo solucoes escalaveis e orientadas a dados que geram impacto mensuravel nos negocios. Minha experiencia conecta estrategia, tecnologia e necessidades do cliente.","hb-current":"Atualmente trabalhando como Data & Product Manager em startup de gestao empresarial","hb-collab":"Buscando colaborar com Comunidades de Produto e Dados","hb-ask":"Pergunte-me sobre:","s-role":"Product Manager","nav-about":"Sobre","nav-cases":"Cases","nav-skills":"Skills","nav-edu":"Educacao","nav-exp":"Experiencia","nav-vol":"Voluntariado","s-exp":"Experiencia Profissional","exp-present":"momento","nav-contact":"Contato","s-lang":"Idiomas","l-pt":"Portugues","l-pt-lv":"Nativo","l-pt-sub":"Fluencia Total","l-en":"Ingles","l-en-lv":"Avancado","l-es":"Espanhol","l-es-lv":"Intermediario","l-es-sub":"Comunicacao Funcional","s-cases":"Cases de Sucesso","s-skills":"Skills & Proficiency","s-toolkit":"Toolkit de Produto","tk1":"Gestao & Roadmap","tk2":"Analise de Dados","tk3":"Automacao","tk4":"Frameworks","s-edu":"Formacao Academica","th-inst":"Instituicao","th-course":"Curso","th-period":"Periodo","edu-r2":"MBA, Gestao Estrategica de Projetos & Metodologias Ageis","edu-r3":"MBA, Gestao da Qualidade","edu-r4":"Bacharelado em Engenharia de Pesca","s-cert":"Certificacoes","cert4":"Gestao de Projetos","cert5":"Gestao Agil com Scrum","s-vol":"Trabalho Voluntario","v-present":"Presente","v-pipoca":"Lideranca da evolucao da plataforma da comunidade, priorizacao de backlog e facilitacao de rituais ageis para disseminacao de conhecimento.","v-fejece":"Atuacao no Conselho Consultivo da Federacao de Empresas Juniores, apoiando a estrategia de crescimento e governanca das empresas juniores do Ceara.","v-coraq":"Lideranca executiva da empresa junior, focada em estrategia de vendas, cultura organizacional e entrega de projetos de consultoria tecnica.","s-contact":"Vamos conectar?","contact-desc":"Aberto a oportunidades de Product Manager, Product Owner ou Business Analyst no mercado europeu.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Gestao Financeira","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Plataforma de Educacao (Arco Educacao)","eb-yampa":"Tempo Integral","eb-agilean":"Consultor","eb-pm1":"Tempo Integral","eb-bv":"Tempo Integral","eb-gft":"Tempo Integral","eb-fort":"Tempo Integral","eb-pm2":"Tempo Integral","eb-sas":"Tempo Integral","ed-yampa":"Product Manager e estrategista de dados na Yampa, SaaS de gestao financeira para PMEs. Responsavel pela estruturacao do produto e construcao da area de inteligencia de dados, liderando discovery, priorizacao de roadmap com foco em retencao e ativacao, gestao de backlog, cerimonias ageis e acompanhamento de OKRs. Estruturacao de pipelines com SQL, Metabase e n8n, e automacao de processos com IA generativa.","ed-agilean":"Responsavel pelo desenvolvimento e evolucao de produto SaaS de controle de qualidade para gestao de obras na construcao civil, conduzindo product discovery, validacao de hipoteses e priorizacao de roadmap com foco em adocao e retencao.","ed-pm1":"Gerente de CX liderando a area da 2a maior rede de farmacias do Brasil (1.500+ lojas, 22M clientes). Reestruturacao completa da operacao de atendimento omnicanal, implementacao de CRM integrado, criacao da subarea de Client Insights e alcance dos maiores indices de NPS, NS e volume de atendimentos da historia da companhia.","ed-bv":"PM no banco digital do BV, responsavel pelo desenvolvimento de solucao de controle e gestao de limites transacionais para toda a estrutura do banco, alinhada a normativas do Banco Central do Brasil (BACEN). Entrega dentro do prazo regulatorio com zero interrupcoes ao usuario final.","ed-gft":"Product Owner alocado no Banco Votorantim, atuando no desenvolvimento e evolucao de produtos digitais do banco com foco em discovery, priorizacao de backlog, cerimonias ageis e definicao de OKRs e KPIs da squad.","ed-fort":"Senior PM responsavel pelo programa de onboarding e ativacao de clientes no APP FortBrasil (cartao de credito), com foco em Growth e Product-Led Growth (PLG). Alcancou +23% na taxa de ativacao de novos usuarios e -47% no tempo para atingimento do primeiro valor.","ed-pm2":"Atuacao nas squads de CRM, Precos e Planejamento Comercial com stakeholders estrategicos, desenvolvimento de projeto de rastreabilidade e desconto com PGMN e McKinsey (Centralizacao de Precos), e gestao de backlog multidisciplinar com Scrum.","ed-sas":"Gestao do maior projeto de producao de conteudo educacional da empresa com metodologias ageis. Liderou o SAS ao Vivo durante a pandemia, transformando projeto emergencial em produto estrategico com 45M+ visualizacoes no YouTube, 50K alunos simultaneos e taxa de retencao acima de 95% na Arco Educacao.","bn-about":"Sobre","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Cases","bn-contact":"Contato","quote-line":"// \"Gosto de resolver problemas!\""},
-en:{"hero-eyebrow":"// product manager & data strategist","hero-bio":"Product Manager with expertise in data analytics, growth, and customer experience. I have led digital product initiatives across fintech, SaaS, and retail, building scalable, data-driven solutions that generate measurable business impact. My work bridges strategy, technology, and customer needs.","hb-current":"Currently working as Data & Product Manager at a business management startup","hb-collab":"Looking to collaborate with Product and Data Communities","hb-ask":"Ask me about:","s-role":"Product Manager","nav-about":"About","nav-cases":"Cases","nav-skills":"Skills","nav-edu":"Education","nav-exp":"Experience","nav-vol":"Volunteering","s-exp":"Professional Experience","exp-present":"present","nav-contact":"Contact","s-lang":"Languages","l-pt":"Portuguese","l-pt-lv":"Native","l-pt-sub":"Full Fluency","l-en":"English","l-en-lv":"Advanced","l-es":"Spanish","l-es-lv":"Intermediate","l-es-sub":"Functional Communication","s-cases":"Success Cases","s-skills":"Skills & Proficiency","s-toolkit":"Product Toolkit","tk1":"Management & Roadmap","tk2":"Data Analysis","tk3":"Automation","tk4":"Frameworks","s-edu":"Education","th-inst":"Institution","th-course":"Course","th-period":"Period","edu-r2":"MBA, Strategic Project Management & Agile Methodologies","edu-r3":"MBA, Quality Management","edu-r4":"BSc, Fisheries Engineering","s-cert":"Certifications","cert4":"Project Management","cert5":"Agile Management with Scrum","s-vol":"Volunteering","v-present":"Present","v-pipoca":"Leading the evolution of the community platform, backlog prioritization, and facilitation of agile ceremonies for knowledge sharing.","v-fejece":"Advisory Board member of the Junior Enterprise Federation, supporting growth strategy and governance.","v-coraq":"Executive leadership of the junior enterprise, focused on sales strategy, organizational culture, and delivery of technical consulting projects.","s-contact":"Let's connect!","contact-desc":"Open to Product Manager, Product Owner, or Business Analyst opportunities in the European market.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Financial Management","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Education Platform (Arco Educacao)","eb-yampa":"Full-time","eb-agilean":"Consultant","eb-pm1":"Full-time","eb-bv":"Full-time","eb-gft":"Full-time","eb-fort":"Full-time","eb-pm2":"Full-time","eb-sas":"Full-time","ed-yampa":"Product Manager and data strategist at Yampa, a financial management SaaS for SMEs. Responsible for product structuring and building the data intelligence area, leading discovery, roadmap prioritization focused on retention and activation, backlog management, agile ceremonies, and OKR tracking. Pipeline setup with SQL, Metabase and n8n, and process automation with generative AI.","ed-agilean":"Responsible for the development and evolution of a quality control SaaS product for construction site management, conducting product discovery, hypothesis validation, and roadmap prioritization focused on adoption and retention.","ed-pm1":"CX Manager leading the CX area of Brazil's 2nd largest pharmacy chain (1,500+ stores, 22M customers). Full restructuring of the omnichannel service operation, integrated CRM implementation, creation of the Client Insights sub-area, and achievement of the company's highest-ever NPS, service level, and attendance volume.","ed-bv":"PM at BV Digital Bank, responsible for developing a transaction limit management solution aligned with Brazilian Central Bank (BACEN) regulations. Delivered on time with zero service interruptions for end users.","ed-gft":"Product Owner allocated at Banco Votorantim, working on digital product development and evolution focused on discovery, backlog prioritization, agile ceremonies, and OKR/KPI definition for the squad.","ed-fort":"Senior PM responsible for the onboarding and activation program at FortBrasil app (credit card), focused on Growth and Product-Led Growth (PLG). Achieved +23% in new user activation rate and -47% in time to first value.","ed-pm2":"Worked in CRM, Pricing, and Commercial Planning squads with strategic stakeholders. Developed a traceability and discount project with PGMN and McKinsey (Price Centralization), and managed multidisciplinary backlog with Scrum.","ed-sas":"Managed the company's largest educational content production project with agile methodologies. Led SAS Live during the pandemic, transforming an emergency project into a strategic product with 45M+ YouTube views, 50K simultaneous students, and a retention rate above 95% at Arco Educacao.","bn-about":"About","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Cases","bn-contact":"Contact","quote-line":"// \"I love solving problems!\""},
-es:{"hero-eyebrow":"// product manager & estratega de datos","hero-bio":"Product Manager con experiencia en analisis de datos, growth y experiencia del cliente. He liderado iniciativas de productos digitales en fintech, SaaS y retail, desarrollando soluciones escalables y orientadas a datos que generan impacto medible en el negocio. Mi experiencia conecta estrategia, tecnologia y necesidades del cliente.","hb-current":"Actualmente trabajando como Data & Product Manager en startup de gestion empresarial","hb-collab":"Buscando colaborar con Comunidades de Producto y Datos","hb-ask":"Preguntame sobre:","s-role":"Product Manager","nav-about":"Sobre mi","nav-cases":"Casos","nav-skills":"Skills","nav-edu":"Educacion","nav-exp":"Experiencia","nav-vol":"Voluntariado","s-exp":"Experiencia Profesional","exp-present":"presente","nav-contact":"Contacto","s-lang":"Idiomas","l-pt":"Portugues","l-pt-lv":"Nativo","l-pt-sub":"Fluidez Total","l-en":"Ingles","l-en-lv":"Avanzado","l-es":"Espanol","l-es-lv":"Intermedio","l-es-sub":"Comunicacion Funcional","s-cases":"Casos de Exito","s-skills":"Skills & Nivel","s-toolkit":"Kit de Herramientas","tk1":"Gestion & Roadmap","tk2":"Analisis de Datos","tk3":"Automatizacion","tk4":"Frameworks","s-edu":"Formacion Academica","th-inst":"Institucion","th-course":"Curso","th-period":"Periodo","edu-r2":"MBA, Gestion Estrategica de Proyectos & Metodologias Agiles","edu-r3":"MBA, Gestion de la Calidad","edu-r4":"Grado en Ingenieria de Pesca","s-cert":"Certificaciones","cert4":"Gestion de Proyectos","cert5":"Gestion Agil con Scrum","s-vol":"Voluntariado","v-present":"Presente","v-pipoca":"Liderazgo de la evolucion de la plataforma comunitaria, priorizacion del backlog y facilitacion de rituales agiles para la difusion del conocimiento.","v-fejece":"Miembro del Consejo Asesor de la Federacion de Empresas Junior, apoyando la estrategia de crecimiento y gobernanza.","v-coraq":"Liderazgo ejecutivo de la empresa junior, enfocado en estrategia de ventas, cultura organizacional y entrega de proyectos de consultoria tecnica.","s-contact":"Conectemos!","contact-desc":"Abierto a oportunidades de Product Manager, Product Owner o Business Analyst en el mercado europeo.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Gestion Financiera","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Plataforma de Educacion (Arco Educacao)","eb-yampa":"Tiempo Completo","eb-agilean":"Consultor","eb-pm1":"Tiempo Completo","eb-bv":"Tiempo Completo","eb-gft":"Tiempo Completo","eb-fort":"Tiempo Completo","eb-pm2":"Tiempo Completo","eb-sas":"Tiempo Completo","ed-yampa":"Product Manager y estratega de datos en Yampa, SaaS de gestion financiera para PYMEs. Responsable de la estructuracion del producto y la construccion del area de inteligencia de datos, liderando discovery, priorizacion de roadmap con foco en retencion y activacion, gestion de backlog, ceremonias agiles y seguimiento de OKRs. Pipelines con SQL, Metabase y n8n, y automatizacion con IA generativa.","ed-agilean":"Responsable del desarrollo y evolucion de un producto SaaS de control de calidad para gestion de obras en construccion civil, conduciendo product discovery, validacion de hipotesis y priorizacion de roadmap con foco en adopcion y retencion.","ed-pm1":"Gerente de CX liderando el area de la 2a cadena farmaceutica mas grande de Brasil (1.500+ tiendas, 22M clientes). Reestructuracion completa de la operacion de atencion omnicanal, implementacion de CRM integrado, creacion de la subarea Client Insights y alcance de los mayores indices de NPS, NS y volumen de atenciones de la historia de la compania.","ed-bv":"PM en el banco digital de BV, responsable del desarrollo de una solucion de control y gestion de limites transaccionales para toda la estructura del banco, alineada a las normativas del Banco Central de Brasil (BACEN). Entrega dentro del plazo regulatorio con cero interrupciones al usuario final.","ed-gft":"Product Owner asignado en Banco Votorantim, trabajando en el desarrollo y evolucion de productos digitales del banco con foco en discovery, priorizacion de backlog, ceremonias agiles y definicion de OKRs y KPIs del squad.","ed-fort":"Senior PM responsable del programa de onboarding y activacion de clientes en la app FortBrasil (tarjeta de credito), con foco en Growth y Product-Led Growth (PLG). Logro +23% en la tasa de activacion de nuevos usuarios y -47% en el tiempo para alcanzar el primer valor.","ed-pm2":"Actuacion en los squads de CRM, Precios y Planificacion Comercial con stakeholders estrategicos, desarrollo de proyecto de trazabilidad y descuento con PGMN y McKinsey (Centralizacion de Precios), y gestion de backlog multidisciplinar con Scrum.","ed-sas":"Gestion del mayor proyecto de produccion de contenido educativo de la empresa con metodologias agiles. Lidero el SAS en Vivo durante la pandemia, transformando un proyecto de emergencia en producto estrategico con 45M+ visualizaciones en YouTube, 50K alumnos simultaneos y tasa de retencion superior al 95% en Arco Educacao.","bn-about":"Sobre","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Casos","bn-contact":"Contacto","quote-line":"// \"Me gusta resolver problemas!\""}
+pt:{"hero-eyebrow":"// product manager & data strategist","hero-bio":"Sou um Product Manager com experiencia em analise de dados, growth e customer experience. Liderei iniciativas de produtos digitais em fintech, SaaS e varejo, desenvolvendo solucoes escalaveis e orientadas a dados que geram impacto mensuravel nos negocios. Minha experiencia conecta estrategia, tecnologia e necessidades do cliente.","hb-current":"Atualmente trabalhando como Data & Product Manager em startup de gestao empresarial","hb-collab":"Buscando colaborar com Comunidades de Produto e Dados","hb-ask":"Pergunte-me sobre:","s-role":"Product Manager","nav-about":"Sobre","nav-cases":"Cases","nav-skills":"Skills","nav-edu":"Educacao","nav-exp":"Experiencia","nav-vol":"Voluntariado","s-exp":"Experiencia Profissional","exp-present":"momento","nav-contact":"Contato","s-lang":"Idiomas","l-pt":"Portugues","l-pt-lv":"Nativo","l-pt-sub":"Fluencia Total","l-en":"Ingles","l-en-lv":"Avancado","l-es":"Espanhol","l-es-lv":"Intermediario","l-es-sub":"Comunicacao Funcional","s-cases":"Cases de Sucesso","s-skills":"Skills & Proficiency","s-toolkit":"Toolkit de Produto","tk1":"Gestao & Roadmap","tk2":"Analise de Dados","tk3":"Automacao","tk4":"Frameworks","s-edu":"Formacao Academica","th-inst":"Instituicao","th-course":"Curso","th-period":"Periodo","edu-r2":"MBA, Gestao Estrategica de Projetos & Metodologias Ageis","edu-r3":"MBA, Gestao da Qualidade","edu-r4":"Bacharelado em Engenharia de Pesca","s-cert":"Certificacoes","cert4":"Gestao de Projetos","cert5":"Gestao Agil com Scrum","s-vol":"Trabalho Voluntario","v-present":"Presente","v-pipoca":"Lideranca da evolucao da plataforma da comunidade, priorizacao de backlog e facilitacao de rituais ageis para disseminacao de conhecimento.","v-fejece":"Atuacao no Conselho Consultivo da Federacao de Empresas Juniores, apoiando a estrategia de crescimento e governanca das empresas juniores do Ceara.","v-coraq":"Lideranca executiva da empresa junior, focada em estrategia de vendas, cultura organizacional e entrega de projetos de consultoria tecnica.","s-contact":"Vamos conectar?","contact-desc":"Aberto a oportunidades de Product Manager, Product Owner ou Business Analyst no mercado europeu.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Gestao Financeira","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Plataforma de Educacao (Arco Educacao)","eb-yampa":"Tempo Integral","eb-agilean":"Consultor","eb-pm1":"Tempo Integral","eb-bv":"Tempo Integral","eb-gft":"Tempo Integral","eb-fort":"Tempo Integral","eb-pm2":"Tempo Integral","eb-sas":"Tempo Integral","ed-yampa":"Product Manager e estrategista de dados na Yampa, SaaS de gestao financeira para PMEs. Responsavel pela estruturacao do produto e construcao da area de inteligencia de dados, liderando discovery, priorizacao de roadmap com foco em retencao e ativacao, gestao de backlog, cerimonias ageis e acompanhamento de OKRs. Estruturacao de pipelines com SQL, Metabase e n8n, e automacao de processos com IA generativa.","ed-agilean":"Responsavel pelo desenvolvimento e evolucao de produto SaaS de controle de qualidade para gestao de obras na construcao civil, conduzindo product discovery, validacao de hipoteses e priorizacao de roadmap com foco em adocao e retencao.","ed-pm1":"Gerente de CX liderando a area da 2a maior rede de farmacias do Brasil (1.500+ lojas, 22M clientes). Reestruturacao completa da operacao de atendimento omnicanal, implementacao de CRM integrado, criacao da subarea de Client Insights e alcance dos maiores indices de NPS, NS e volume de atendimentos da historia da companhia.","ed-bv":"PM no banco digital do BV, responsavel pelo desenvolvimento de solucao de controle e gestao de limites transacionais para toda a estrutura do banco, alinhada a normativas do Banco Central do Brasil (BACEN). Entrega dentro do prazo regulatorio com zero interrupcoes ao usuario final.","ed-gft":"Product Owner alocado no Banco Votorantim, atuando no desenvolvimento e evolucao de produtos digitais do banco com foco em discovery, priorizacao de backlog, cerimonias ageis e definicao de OKRs e KPIs da squad.","ed-fort":"Senior PM responsavel pelo programa de onboarding e ativacao de clientes no APP FortBrasil (cartao de credito), com foco em Growth e Product-Led Growth (PLG). Alcancou +23% na taxa de ativacao de novos usuarios e -47% no tempo para atingimento do primeiro valor.","ed-pm2":"Atuacao nas squads de CRM, Precos e Planejamento Comercial com stakeholders estrategicos, desenvolvimento de projeto de rastreabilidade e desconto com PGMN e McKinsey (Centralizacao de Precos), e gestao de backlog multidisciplinar com Scrum.","ed-sas":"Gestao do maior projeto de producao de conteudo educacional da empresa com metodologias ageis. Liderou o SAS ao Vivo durante a pandemia, transformando projeto emergencial em produto estrategico com 45M+ visualizacoes no YouTube, 50K alunos simultaneos e taxa de retencao acima de 95% na Arco Educacao.","bn-about":"Sobre","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Cases","bn-contact":"Contato","otw-label":"Aberto a oportunidades","looking-text":"Busco oportunidades como <strong>Product Manager, Product Owner ou Business Analyst</strong> em empresas de tecnologia, fintechs, startups ou consultorias — onde produto e dados andam juntos e decisoes sao tomadas com evidencia, nao intuicao.<br><br>Trabalho bem em times multidisciplinares, ambientes ageis e contextos que exigem clareza onde ha caos. Aberto a modelos remoto, hibrido ou presencial na Espanha.","chip-role":"PM · PO · Business Analyst","chip-loc":"Remoto · Hibrido · Espanha","chip-sector":"Tech · Fintech · Startup · Consultoria","quote-line":"// \"Gosto de resolver problemas!\""},
+en:{"hero-eyebrow":"// product manager & data strategist","hero-bio":"Product Manager with expertise in data analytics, growth, and customer experience. I have led digital product initiatives across fintech, SaaS, and retail, building scalable, data-driven solutions that generate measurable business impact. My work bridges strategy, technology, and customer needs.","hb-current":"Currently working as Data & Product Manager at a business management startup","hb-collab":"Looking to collaborate with Product and Data Communities","hb-ask":"Ask me about:","s-role":"Product Manager","nav-about":"About","nav-cases":"Cases","nav-skills":"Skills","nav-edu":"Education","nav-exp":"Experience","nav-vol":"Volunteering","s-exp":"Professional Experience","exp-present":"present","nav-contact":"Contact","s-lang":"Languages","l-pt":"Portuguese","l-pt-lv":"Native","l-pt-sub":"Full Fluency","l-en":"English","l-en-lv":"Advanced","l-es":"Spanish","l-es-lv":"Intermediate","l-es-sub":"Functional Communication","s-cases":"Success Cases","s-skills":"Skills & Proficiency","s-toolkit":"Product Toolkit","tk1":"Management & Roadmap","tk2":"Data Analysis","tk3":"Automation","tk4":"Frameworks","s-edu":"Education","th-inst":"Institution","th-course":"Course","th-period":"Period","edu-r2":"MBA, Strategic Project Management & Agile Methodologies","edu-r3":"MBA, Quality Management","edu-r4":"BSc, Fisheries Engineering","s-cert":"Certifications","cert4":"Project Management","cert5":"Agile Management with Scrum","s-vol":"Volunteering","v-present":"Present","v-pipoca":"Leading the evolution of the community platform, backlog prioritization, and facilitation of agile ceremonies for knowledge sharing.","v-fejece":"Advisory Board member of the Junior Enterprise Federation, supporting growth strategy and governance.","v-coraq":"Executive leadership of the junior enterprise, focused on sales strategy, organizational culture, and delivery of technical consulting projects.","s-contact":"Let's connect!","contact-desc":"Open to Product Manager, Product Owner, or Business Analyst opportunities in the European market.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Financial Management","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Education Platform (Arco Educacao)","eb-yampa":"Full-time","eb-agilean":"Consultant","eb-pm1":"Full-time","eb-bv":"Full-time","eb-gft":"Full-time","eb-fort":"Full-time","eb-pm2":"Full-time","eb-sas":"Full-time","ed-yampa":"Product Manager and data strategist at Yampa, a financial management SaaS for SMEs. Responsible for product structuring and building the data intelligence area, leading discovery, roadmap prioritization focused on retention and activation, backlog management, agile ceremonies, and OKR tracking. Pipeline setup with SQL, Metabase and n8n, and process automation with generative AI.","ed-agilean":"Responsible for the development and evolution of a quality control SaaS product for construction site management, conducting product discovery, hypothesis validation, and roadmap prioritization focused on adoption and retention.","ed-pm1":"CX Manager leading the CX area of Brazil's 2nd largest pharmacy chain (1,500+ stores, 22M customers). Full restructuring of the omnichannel service operation, integrated CRM implementation, creation of the Client Insights sub-area, and achievement of the company's highest-ever NPS, service level, and attendance volume.","ed-bv":"PM at BV Digital Bank, responsible for developing a transaction limit management solution aligned with Brazilian Central Bank (BACEN) regulations. Delivered on time with zero service interruptions for end users.","ed-gft":"Product Owner allocated at Banco Votorantim, working on digital product development and evolution focused on discovery, backlog prioritization, agile ceremonies, and OKR/KPI definition for the squad.","ed-fort":"Senior PM responsible for the onboarding and activation program at FortBrasil app (credit card), focused on Growth and Product-Led Growth (PLG). Achieved +23% in new user activation rate and -47% in time to first value.","ed-pm2":"Worked in CRM, Pricing, and Commercial Planning squads with strategic stakeholders. Developed a traceability and discount project with PGMN and McKinsey (Price Centralization), and managed multidisciplinary backlog with Scrum.","ed-sas":"Managed the company's largest educational content production project with agile methodologies. Led SAS Live during the pandemic, transforming an emergency project into a strategic product with 45M+ YouTube views, 50K simultaneous students, and a retention rate above 95% at Arco Educacao.","bn-about":"About","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Cases","bn-contact":"Contact","otw-label":"Open to work","looking-text":"Looking for opportunities as <strong>Product Manager, Product Owner or Business Analyst</strong> at tech companies, fintechs, startups or consultancies — where product and data go hand in hand and decisions are driven by evidence, not gut feeling.<br><br>I thrive in cross-functional teams, agile environments, and contexts that demand clarity out of chaos. Open to remote, hybrid or on-site roles in Spain.","chip-role":"PM · PO · Business Analyst","chip-loc":"Remote · Hybrid · Spain","chip-sector":"Tech · Fintech · Startup · Consulting","quote-line":"// \"I love solving problems!\""},
+es:{"hero-eyebrow":"// product manager & estratega de datos","hero-bio":"Product Manager con experiencia en analisis de datos, growth y experiencia del cliente. He liderado iniciativas de productos digitales en fintech, SaaS y retail, desarrollando soluciones escalables y orientadas a datos que generan impacto medible en el negocio. Mi experiencia conecta estrategia, tecnologia y necesidades del cliente.","hb-current":"Actualmente trabajando como Data & Product Manager en startup de gestion empresarial","hb-collab":"Buscando colaborar con Comunidades de Producto y Datos","hb-ask":"Preguntame sobre:","s-role":"Product Manager","nav-about":"Sobre mi","nav-cases":"Casos","nav-skills":"Skills","nav-edu":"Educacion","nav-exp":"Experiencia","nav-vol":"Voluntariado","s-exp":"Experiencia Profesional","exp-present":"presente","nav-contact":"Contacto","s-lang":"Idiomas","l-pt":"Portugues","l-pt-lv":"Nativo","l-pt-sub":"Fluidez Total","l-en":"Ingles","l-en-lv":"Avanzado","l-es":"Espanol","l-es-lv":"Intermedio","l-es-sub":"Comunicacion Funcional","s-cases":"Casos de Exito","s-skills":"Skills & Nivel","s-toolkit":"Kit de Herramientas","tk1":"Gestion & Roadmap","tk2":"Analisis de Datos","tk3":"Automatizacion","tk4":"Frameworks","s-edu":"Formacion Academica","th-inst":"Institucion","th-course":"Curso","th-period":"Periodo","edu-r2":"MBA, Gestion Estrategica de Proyectos & Metodologias Agiles","edu-r3":"MBA, Gestion de la Calidad","edu-r4":"Grado en Ingenieria de Pesca","s-cert":"Certificaciones","cert4":"Gestion de Proyectos","cert5":"Gestion Agil con Scrum","s-vol":"Voluntariado","v-present":"Presente","v-pipoca":"Liderazgo de la evolucion de la plataforma comunitaria, priorizacion del backlog y facilitacion de rituales agiles para la difusion del conocimiento.","v-fejece":"Miembro del Consejo Asesor de la Federacion de Empresas Junior, apoyando la estrategia de crecimiento y gobernanza.","v-coraq":"Liderazgo ejecutivo de la empresa junior, enfocado en estrategia de ventas, cultura organizacional y entrega de proyectos de consultoria tecnica.","s-contact":"Conectemos!","contact-desc":"Abierto a oportunidades de Product Manager, Product Owner o Business Analyst en el mercado europeo.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Gestion Financiera","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Plataforma de Educacion (Arco Educacao)","eb-yampa":"Tiempo Completo","eb-agilean":"Consultor","eb-pm1":"Tiempo Completo","eb-bv":"Tiempo Completo","eb-gft":"Tiempo Completo","eb-fort":"Tiempo Completo","eb-pm2":"Tiempo Completo","eb-sas":"Tiempo Completo","ed-yampa":"Product Manager y estratega de datos en Yampa, SaaS de gestion financiera para PYMEs. Responsable de la estructuracion del producto y la construccion del area de inteligencia de datos, liderando discovery, priorizacion de roadmap con foco en retencion y activacion, gestion de backlog, ceremonias agiles y seguimiento de OKRs. Pipelines con SQL, Metabase y n8n, y automatizacion con IA generativa.","ed-agilean":"Responsable del desarrollo y evolucion de un producto SaaS de control de calidad para gestion de obras en construccion civil, conduciendo product discovery, validacion de hipotesis y priorizacion de roadmap con foco en adopcion y retencion.","ed-pm1":"Gerente de CX liderando el area de la 2a cadena farmaceutica mas grande de Brasil (1.500+ tiendas, 22M clientes). Reestructuracion completa de la operacion de atencion omnicanal, implementacion de CRM integrado, creacion de la subarea Client Insights y alcance de los mayores indices de NPS, NS y volumen de atenciones de la historia de la compania.","ed-bv":"PM en el banco digital de BV, responsable del desarrollo de una solucion de control y gestion de limites transaccionales para toda la estructura del banco, alineada a las normativas del Banco Central de Brasil (BACEN). Entrega dentro del plazo regulatorio con cero interrupciones al usuario final.","ed-gft":"Product Owner asignado en Banco Votorantim, trabajando en el desarrollo y evolucion de productos digitales del banco con foco en discovery, priorizacion de backlog, ceremonias agiles y definicion de OKRs y KPIs del squad.","ed-fort":"Senior PM responsable del programa de onboarding y activacion de clientes en la app FortBrasil (tarjeta de credito), con foco en Growth y Product-Led Growth (PLG). Logro +23% en la tasa de activacion de nuevos usuarios y -47% en el tiempo para alcanzar el primer valor.","ed-pm2":"Actuacion en los squads de CRM, Precios y Planificacion Comercial con stakeholders estrategicos, desarrollo de proyecto de trazabilidad y descuento con PGMN y McKinsey (Centralizacion de Precios), y gestion de backlog multidisciplinar con Scrum.","ed-sas":"Gestion del mayor proyecto de produccion de contenido educativo de la empresa con metodologias agiles. Lidero el SAS en Vivo durante la pandemia, transformando un proyecto de emergencia en producto estrategico con 45M+ visualizaciones en YouTube, 50K alumnos simultaneos y tasa de retencion superior al 95% en Arco Educacao.","bn-about":"Sobre","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Casos","bn-contact":"Contacto","otw-label":"Abierto a oportunidades","looking-text":"Busco oportunidades como <strong>Product Manager, Product Owner o Business Analyst</strong> en empresas de tecnologia, fintechs, startups o consultoras — donde producto y datos van de la mano y las decisiones se toman con evidencia, no con intuicion.<br><br>Me desenvuelvo bien en equipos multidisciplinares, entornos agiles y contextos que exigen claridad en medio del caos. Abierto a modalidad remota, hibrida o presencial en Espana.","chip-role":"PM · PO · Business Analyst","chip-loc":"Remoto · Hibrido · Espana","chip-sector":"Tech · Fintech · Startup · Consultora","quote-line":"// \"Me gusta resolver problemas!\""}
 };
 
 // ─── RENDER ───────────────────────────────────────────────────────────────────
@@ -1069,7 +1200,13 @@ function toggleCase(i){
 function setLang(lang){
   document.documentElement.lang=lang;
   var t=UI[lang];
-  for(var id in t){var el=document.getElementById(id);if(el)el.textContent=t[id];}
+  var htmlIds = {'looking-text':1};
+  for(var id in t){
+    var el=document.getElementById(id);
+    if(!el) continue;
+    if(htmlIds[id]) el.innerHTML=t[id];
+    else el.textContent=t[id];
+  }
   // update all exp-present spans
   var presents=document.querySelectorAll('.exp-present');
   for(var i=0;i<presents.length;i++)presents[i].textContent=t['exp-present']||'presente';
@@ -1133,27 +1270,62 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'ArrowRight') lbNav(1);
 });
 
-// ─── THEME ────────────────────────────────────────────────────────────────────
-function toggleTheme() {
-  var isLight = document.documentElement.classList.toggle('light');
-  document.getElementById('icon-moon').style.display = isLight ? 'none'  : 'block';
-  document.getElementById('icon-sun').style.display  = isLight ? 'block' : 'none';
-  document.querySelector('meta[name="theme-color"]').setAttribute('content', isLight ? '#F6F8FA' : '#0D1117');
-  try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e){}
+// ─── SCROLL PROGRESS BAR ──────────────────────────────────────────────────────
+window.addEventListener('scroll', function() {
+  var scrolled = document.documentElement.scrollTop;
+  var total    = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('scroll-bar').style.width = (scrolled / total * 100) + '%';
+}, { passive: true });
+
+// ─── SCROLL ANIMATIONS ────────────────────────────────────────────────────────
+function initAnimations() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  // Animate sections, cards, exp-items, skill-items
+  document.querySelectorAll('section, .case-card, .exp-item, .skill-item, .lang-card, .card, .looking-card').forEach(function(el) {
+    el.classList.add('fade-up');
+    observer.observe(el);
+  });
+
+  // Skill bars — animate width on enter
+  var barObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        var bar = e.target.querySelector('.skill-bar');
+        if (bar) { var w = bar.style.width; bar.style.width = '0'; setTimeout(function(){ bar.style.transition = 'width .8s ease'; bar.style.width = w; }, 50); }
+        barObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.skill-item').forEach(function(el) { barObserver.observe(el); });
 }
 
-// On load: default dark, restore saved preference if any
+// ─── THEME ────────────────────────────────────────────────────────────────────
+function toggleTheme() {
+  var isDark = document.documentElement.classList.toggle('dark');
+  document.getElementById('icon-moon').style.display = isDark ? 'none'  : 'block';
+  document.getElementById('icon-sun').style.display  = isDark ? 'block' : 'none';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#0D1117' : '#F6F8FA');
+  try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch(e){}
+}
+
+// On load: default light, restore dark if saved
 (function(){
   var saved;
   try { saved = localStorage.getItem('theme'); } catch(e){}
-  if (saved === 'light') {
-    document.documentElement.classList.add('light');
+  if (saved === 'dark') {
+    document.documentElement.classList.add('dark');
     document.getElementById('icon-moon').style.display = 'none';
     document.getElementById('icon-sun').style.display  = 'block';
   }
 })();
 
 setLang('pt');
+initAnimations();
 </script>
 </body>
 </html>
