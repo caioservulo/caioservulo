@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── PRIMARY META ── -->
+  <title>Caio Servulo — Product Manager</title>
+  <meta name="description" content="Portfolio de Caio Servulo, Product Manager com experiencia em fintech, SaaS e varejo. Data-driven, orientado a OKRs e growth." />
+  <meta name="author" content="Caio Servulo" />
+  <meta name="keywords" content="Product Manager, Product Owner, Business Analyst, Data Strategist, Fintech, SaaS, Agile, OKRs, Valladolid, Spain, Europe" />
+
+  <!-- ── OPEN GRAPH (LinkedIn, WhatsApp, Facebook) ── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://caioservulo.github.io/caioservulo/" />
+  <meta property="og:title"       content="Caio Servulo — Product Manager" />
+  <meta property="og:description" content="Product Manager com 5+ anos em fintech, SaaS e varejo. Especialista em data intelligence, growth e customer experience. Baseado em Valladolid, ES." />
+  <meta property="og:image"       content="https://raw.githubusercontent.com/caioservulo/caioservulo/main/assets/avatar.jpg" />
+  <meta property="og:image:width"  content="400" />
+  <meta property="og:image:height" content="400" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+
+  <!-- ── TWITTER / X CARD ── -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="Caio Servulo — Product Manager" />
+  <meta name="twitter:description" content="Product Manager com 5+ anos em fintech, SaaS e varejo. Data-driven, orientado a growth e OKRs." />
+  <meta name="twitter:image"       content="https://raw.githubusercontent.com/caioservulo/caioservulo/main/assets/avatar.jpg" />
+
+  <!-- ── FAVICON (SVG inline + PNG fallback) ── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F8EF7'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial' font-weight='800' font-size='14' fill='white'%3ECS%3C/text%3E%3C/svg%3E" />
+  <link rel="alternate icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/avatar.jpg" />
+  <meta name="theme-color" content="#0D1117" />
+
+  <!-- ── GOOGLE ANALYTICS 4 ── -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX7NHM6BFC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EX7NHM6BFC');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#0D1117; --bg2:#161B22; --bg3:#1C2330;
+      --border:#30363D; --text:#E6EDF3; --muted:#8B949E;
+      --accent:#4F8EF7; --green:#3FB950; --radius:8px;
+      --sidebar-w:260px; --topbar-h:46px;
+    }
+    html.light {
+      --bg:#F6F8FA; --bg2:#FFFFFF; --bg3:#F0F2F5;
+      --border:#D0D7DE; --text:#1F2328; --muted:#656D76;
+      --accent:#0969DA; --green:#1A7F37;
+    }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:15px; line-height:1.6; min-height:100vh; transition: background .25s, color .25s; }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      position:fixed; top:0; left:0; right:0; height:var(--topbar-h);
+      background:var(--bg2); border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 28px; z-index:300; transition:background .25s, border-color .25s;
+    }
+    .topbar-left { display:flex; align-items:center; gap:6px; }
+    .topbar-right { display:flex; align-items:center; gap:6px; }
+    .topbar-label { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); margin-right:6px; letter-spacing:.05em; }
+    .lang-btn {
+      display:flex; align-items:center; gap:5px;
+      padding:5px 14px; border-radius:20px; border:1px solid var(--border);
+      background:transparent; color:var(--muted); font-size:12px;
+      font-family:'Inter',sans-serif; cursor:pointer; transition:all .2s;
+    }
+    .lang-btn:hover { border-color:var(--accent); color:var(--text); }
+    .lang-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; }
+
+    /* ── THEME TOGGLE ── */
+    .theme-btn {
+      width:34px; height:34px; border-radius:50%;
+      border:1px solid var(--border); background:var(--bg3);
+      color:var(--muted); cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      transition:all .2s; flex-shrink:0;
+    }
+    .theme-btn:hover { border-color:var(--accent); color:var(--accent); background:var(--bg2); }
+    .theme-btn svg { width:15px; height:15px; }
+    .topbar-divider { width:1px; height:20px; background:var(--border); margin:0 4px; }
+
+    /* ── SHELL ── */
+    .shell { display:flex; min-height:100vh; padding-top:var(--topbar-h); }
+
+    /* ── SIDEBAR ── */
+    aside {
+      width:var(--sidebar-w); min-width:var(--sidebar-w);
+      background:var(--bg2); border-right:1px solid var(--border);
+      position:sticky; top:var(--topbar-h); height:calc(100vh - var(--topbar-h));
+      overflow-y:auto; padding:32px 22px;
+      display:flex; flex-direction:column; gap:28px;
+      transition:background .25s, border-color .25s;
+    }
+    .avatar {
+      width:80px; height:80px; border-radius:50%;
+      background:linear-gradient(135deg, var(--accent), var(--green));
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Syne',sans-serif; font-size:26px; font-weight:800;
+      color:#fff; margin:0 auto; flex-shrink:0;
+      overflow:hidden; border:2px solid var(--border);
+    }
+    .avatar img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      border-radius:50%;
+    }
+    .s-name { font-family:'Syne',sans-serif; font-size:17px; font-weight:700; text-align:center; }
+    .s-role { font-size:12px; color:var(--accent); text-align:center; font-weight:600; }
+    .s-loc  { font-size:11px; color:var(--muted); text-align:center; display:flex; align-items:center; justify-content:center; gap:4px; }
+    .s-loc svg { width:11px; height:11px; color:var(--accent); flex-shrink:0; }
+
+    .s-links { display:flex; flex-direction:column; gap:8px; }
+    .s-link {
+      display:flex; align-items:center; gap:10px;
+      padding:9px 13px; border-radius:var(--radius);
+      background:var(--bg3); color:var(--text);
+      text-decoration:none; font-size:13px; font-weight:500;
+      border:1px solid transparent; transition:all .2s;
+    }
+    .s-link:hover { border-color:var(--accent); color:var(--accent); }
+    .s-link svg { flex-shrink:0; opacity:.7; }
+
+    .nav-group { display:flex; flex-direction:column; gap:3px; }
+    .nav-label { font-size:10px; font-family:'JetBrains Mono',monospace; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; margin-bottom:4px; }
+    .nav-item {
+      display:flex; align-items:center; gap:9px; padding:8px 11px;
+      border-radius:6px; color:var(--muted); font-size:13px;
+      cursor:pointer; border:none; background:none; width:100%; text-align:left;
+      transition:background .15s, color .15s;
+    }
+    .nav-item:hover { background:var(--bg3); color:var(--text); }
+    .nav-item.active { background:var(--bg3); color:var(--accent); }
+    .nav-item svg { flex-shrink:0; }
+
+    /* ── MAIN ── */
+    main { flex:1; padding:52px 64px; }
+
+    /* ── HERO ── */
+    .hero { margin-bottom:60px; }
+    .eyebrow { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--green); letter-spacing:.14em; margin-bottom:14px; }
+    .hero-name {
+      font-family:'Syne',sans-serif;
+      font-size:clamp(40px, 4.5vw, 64px);
+      font-weight:800; line-height:1.05; margin-bottom:12px;
+      background:linear-gradient(90deg, var(--text) 50%, var(--accent));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .hero-title { font-size:16px; color:var(--accent); font-weight:600; margin-bottom:20px; }
+    .hero-bio { font-size:15px; color:var(--muted); max-width:680px; line-height:1.85; }
+    .tag-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+    .tag { padding:4px 13px; border-radius:20px; border:1px solid var(--border); font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--muted); background:var(--bg3); }
+
+    /* ── SECTIONS ── */
+    section { margin-bottom:56px; scroll-margin-top:70px; }
+    .sec-header { display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+    .sec-icon { width:32px; height:32px; border-radius:8px; background:var(--bg3); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent); transition:background .25s, border-color .25s; }
+    .sec-icon svg { width:16px; height:16px; }
+    .sec-title { font-family:'Syne',sans-serif; font-size:20px; font-weight:700; }
+
+    /* ── LANG CARDS ── */
+    .lang-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:520px; }
+    .lang-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:18px 14px; text-align:center; }
+    .lang-flag { font-size:28px; margin-bottom:8px; }
+    .lang-flag-wrap { display:flex; justify-content:center; margin-bottom:10px; }
+    .lang-flag-wrap svg { border-radius:50%; overflow:hidden; box-shadow:0 0 0 2px var(--border); }
+    .lang-name { font-family:'Syne',sans-serif; font-weight:700; font-size:14px; margin-bottom:3px; }
+    .lang-level { font-size:12px; color:var(--accent); font-weight:600; }
+    .lang-sub { font-size:11px; color:var(--muted); margin-top:3px; }
+
+    /* ── CASES ── */
+    .case-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:14px; overflow:hidden; transition:border-color .2s; }
+    .case-card:hover { border-color:rgba(79,142,247,.4); }
+    .case-card.open { border-color:var(--accent); }
+
+    .case-header {
+      padding:22px 26px; cursor:pointer;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+      user-select:none;
+    }
+    .case-header-left { flex:1; min-width:0; }
+    .case-num { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--accent); letter-spacing:.12em; margin-bottom:6px; }
+    .case-name { font-family:'Syne',sans-serif; font-size:16px; font-weight:700; margin-bottom:5px; line-height:1.3; }
+    .case-company { font-size:12px; color:var(--muted); }
+    .case-chevron { color:var(--muted); font-size:22px; transition:transform .25s; margin-top:2px; flex-shrink:0; line-height:1; }
+    .case-card.open .case-chevron { transform:rotate(180deg); color:var(--accent); }
+
+    .case-body { display:none; padding:0 26px 26px; }
+    .case-card.open .case-body { display:block; }
+
+    .case-divider { height:1px; background:var(--border); margin-bottom:24px; }
+
+    .case-section { margin-bottom:24px; }
+    .case-section:last-child { margin-bottom:0; }
+    .case-section-label {
+      font-size:10px; font-family:'JetBrains Mono',monospace;
+      color:var(--accent); text-transform:uppercase; letter-spacing:.12em;
+      margin-bottom:10px; display:flex; align-items:center; gap:6px;
+    }
+    .case-section-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+    .case-quote {
+      border-left:3px solid var(--accent); padding:12px 16px;
+      background:var(--bg3); border-radius:0 6px 6px 0;
+      font-size:14px; color:var(--text); font-style:italic;
+      line-height:1.7; margin-top:12px;
+    }
+
+    .case-steps { display:flex; flex-direction:column; gap:12px; }
+    .case-step { display:flex; gap:14px; align-items:flex-start; }
+    .step-num {
+      width:24px; height:24px; border-radius:50%; background:var(--accent);
+      color:#fff; font-size:11px; font-weight:700;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px;
+    }
+    .step-text { font-size:14px; color:var(--muted); line-height:1.7; }
+    .step-text strong { color:var(--text); }
+
+    .metrics-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:10px; }
+    .metric { background:var(--bg3); border:1px solid var(--border); border-radius:8px; padding:14px 16px; }
+    .metric-val { font-family:'JetBrains Mono',monospace; font-size:22px; font-weight:600; color:var(--green); line-height:1; margin-bottom:5px; }
+    .metric-label { font-size:11px; color:var(--muted); line-height:1.5; }
+
+    .learnings { display:flex; flex-direction:column; gap:10px; }
+    .learning { display:flex; gap:12px; font-size:14px; color:var(--muted); line-height:1.7; }
+    .learn-arrow { color:var(--accent); flex-shrink:0; font-weight:700; margin-top:1px; }
+
+    .case-stack { display:flex; flex-wrap:wrap; gap:8px; }
+    .stack-tag {
+      padding:4px 11px; border-radius:5px;
+      background:var(--bg3); border:1px solid var(--border);
+      font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--muted);
+      white-space:nowrap;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-item { display:flex; gap:16px; margin-bottom:24px; position:relative; }
+    .exp-item:not(:last-child)::before { content:''; position:absolute; left:19px; top:42px; bottom:-24px; width:1px; background:var(--border); }
+    .exp-logo { width:38px; height:38px; border-radius:8px; background:var(--bg3); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; font-weight:700; font-family:'JetBrains Mono',monospace; color:var(--accent); }
+    .exp-body { flex:1; min-width:0; }
+    .exp-role { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; margin-bottom:2px; }
+    .exp-company { font-size:13px; color:var(--accent); font-weight:600; margin-bottom:2px; }
+    .exp-period { font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace; margin-bottom:8px; }
+    .exp-badge { display:inline-block; padding:1px 7px; border-radius:4px; font-size:10px; font-weight:600; background:rgba(79,142,247,.15); color:var(--accent); border:1px solid rgba(79,142,247,.3); letter-spacing:.03em; }
+    .exp-badge-alt { background:rgba(63,185,80,.12); color:var(--green); border-color:rgba(63,185,80,.3); }
+    .exp-desc { font-size:13px; color:var(--muted); line-height:1.7; }
+    .exp-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+    .case-images { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr)); gap:10px; margin-top:4px; }
+    .case-img-wrap { position:relative; cursor:zoom-in; border-radius:6px; overflow:hidden; border:1px solid var(--border); background:var(--bg3); aspect-ratio:16/9; }
+    .case-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s, opacity .3s; }
+    .case-img-wrap:hover img { transform:scale(1.03); opacity:.85; }
+    .case-img-wrap::after { content:'⤢'; position:absolute; top:8px; right:8px; background:rgba(0,0,0,.6); color:white; font-size:13px; width:26px; height:26px; border-radius:4px; display:grid; place-items:center; opacity:0; transition:opacity .2s; pointer-events:none; }
+    .case-img-wrap:hover::after { opacity:1; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.92); z-index:1000; align-items:center; justify-content:center; cursor:zoom-out; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:92vw; max-height:92vh; border-radius:8px; object-fit:contain; box-shadow:0 0 60px rgba(0,0,0,.8); }
+    .lightbox-close { position:fixed; top:20px; right:24px; color:white; font-size:28px; cursor:pointer; opacity:.7; line-height:1; background:none; border:none; }
+    .lightbox-close:hover { opacity:1; }
+    .lightbox-prev, .lightbox-next { position:fixed; top:50%; transform:translateY(-50%); color:white; font-size:32px; cursor:pointer; opacity:.6; background:rgba(0,0,0,.4); border:none; padding:12px 16px; border-radius:8px; }
+    .lightbox-prev:hover, .lightbox-next:hover { opacity:1; }
+    .lightbox-prev { left:16px; }
+    .lightbox-next { right:16px; }
+    .lightbox-counter { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,.6); font-size:12px; font-family:'JetBrains Mono',monospace; }
+
+    /* ── SKILLS ── */
+    .skills-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:12px; }
+    .skill-item { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:15px 17px; }
+    .skill-name { font-size:13px; font-weight:600; margin-bottom:9px; }
+    .skill-bar-bg { height:4px; background:var(--bg3); border-radius:2px; overflow:hidden; }
+    .skill-bar { height:100%; border-radius:2px; background:linear-gradient(90deg, var(--accent), var(--green)); }
+    .skill-pct { font-size:11px; color:var(--muted); margin-top:5px; font-family:'JetBrains Mono',monospace; }
+
+    .toolkit-row { display:flex; gap:14px; align-items:flex-start; margin-bottom:12px; }
+    .tk-label { font-size:12px; font-weight:600; color:var(--muted); width:150px; flex-shrink:0; padding-top:4px; }
+
+    /* ── HERO BULLETS ── */
+    .hero-bullets { list-style:none; margin-top:24px; display:flex; flex-direction:column; gap:14px; }
+    .hero-bullets li { display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--muted); line-height:1.6; }
+    .hero-bullet-content { display:flex; flex-direction:column; gap:8px; }
+    .bullet-icon { flex-shrink:0; margin-top:2px; color:var(--accent); display:flex; align-items:center; }
+
+    /* ── TABLE ── */
+    .data-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .data-table th { text-align:left; padding:10px 14px; background:var(--bg3); color:var(--muted); font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:.07em; border-bottom:1px solid var(--border); }
+    .data-table td { padding:12px 14px; border-bottom:1px solid var(--border); color:var(--text); }
+    .data-table tr:last-child td { border-bottom:none; }
+    .data-table tr:hover td { background:var(--bg3); }
+    .cert-link { color:var(--accent); text-decoration:none; font-size:12px; margin-left:6px; }
+    .cert-link:hover { text-decoration:underline; }
+
+    /* ── SIMPLE CARDS ── */
+    .card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:20px 24px; margin-bottom:12px; transition:border-color .2s; }
+    .card:hover { border-color:rgba(79,142,247,.4); }
+    .card-title { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; margin-bottom:3px; }
+    .card-meta { font-size:11px; color:var(--accent); font-weight:600; margin-bottom:10px; }
+    .card-desc { font-size:13px; color:var(--muted); line-height:1.7; }
+
+    /* ── CONTACT ── */
+    .contact-btn {
+      display:inline-flex; align-items:center; gap:9px;
+      padding:11px 22px; border-radius:var(--radius);
+      text-decoration:none; font-size:14px; font-weight:600;
+      border:1px solid var(--border); color:var(--text); background:var(--bg2);
+      transition:all .2s; margin-right:10px; margin-bottom:10px;
+    }
+    .contact-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .contact-btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .contact-btn.primary:hover { opacity:.88; }
+
+    /* ── MOBILE ── */
+    /* ══════════════════════════════════════════
+       MOBILE  ≤ 768px
+    ══════════════════════════════════════════ */
+    @media (max-width:768px) {
+
+      /* topbar: compacto */
+      .topbar { padding:0 14px; }
+      .topbar-label { display:none; }
+      .lang-btn { padding:4px 10px; font-size:11px; }
+      .topbar-divider { margin:0 2px; }
+
+      /* shell: coluna, sem sidebar */
+      .shell { flex-direction:column; padding-top:var(--topbar-h); }
+
+      /* sidebar: oculta no mobile — nav fica no bottom bar */
+      aside { display:none; }
+
+      /* main: padding mobile */
+      main { padding:24px 16px 100px; } /* 100px = espaço para bottom nav */
+
+      /* hero */
+      .hero { margin-bottom:36px; }
+      .hero-name { font-size:clamp(28px,8vw,40px); }
+      .hero-title { font-size:13px; }
+      .hero-bio { font-size:13px; }
+
+      /* lang grid: 3 colunas compactas */
+      .lang-grid { grid-template-columns:repeat(3,1fr); gap:8px; max-width:100%; }
+      .lang-card { padding:12px 8px; }
+      .lang-flag-wrap svg { width:36px; height:36px; }
+      .lang-name { font-size:12px; }
+      .lang-level { font-size:11px; }
+      .lang-sub { font-size:10px; }
+
+      /* cases: header mais compacto */
+      .case-header { padding:14px 16px; }
+      .case-name { font-size:14px; }
+      .case-body { padding:0 16px 18px; }
+      .metrics-grid { grid-template-columns:repeat(2,1fr); gap:8px; }
+      .metric-val { font-size:18px; }
+      .case-images { grid-template-columns:1fr; }
+
+      /* skills: 1 coluna */
+      .skills-grid { grid-template-columns:1fr 1fr; gap:8px; }
+
+      /* toolkit: empilha */
+      .toolkit-row { flex-direction:column; gap:6px; }
+      .tk-label { width:auto; font-size:11px; }
+
+      /* tabela educação: esconde coluna de período em telas muito pequenas */
+      .data-table { font-size:12px; }
+      .data-table th, .data-table td { padding:8px 10px; }
+
+      /* experiencia */
+      .exp-item:not(:last-child)::before { left:17px; top:38px; }
+      .exp-logo { width:34px; height:34px; font-size:10px; border-radius:6px; }
+      .exp-role { font-size:14px; }
+      .exp-desc { font-size:12px; }
+
+      /* contact buttons: empilha */
+      .contact-btn { display:flex; width:100%; justify-content:center; margin-right:0; margin-bottom:8px; }
+
+      /* lightbox */
+      .lightbox-prev { left:6px; padding:10px 12px; }
+      .lightbox-next { right:6px; padding:10px 12px; }
+
+      /* sec-title menor */
+      .sec-title { font-size:17px; }
+    }
+
+    /* ══════════════════════════════════════════
+       BOTTOM NAV — só mobile
+    ══════════════════════════════════════════ */
+    .bottom-nav {
+      display:none;
+      position:fixed; bottom:0; left:0; right:0;
+      height:60px;
+      background:var(--bg2);
+      border-top:1px solid var(--border);
+      z-index:200;
+      align-items:center;
+      justify-content:space-around;
+      padding:0 4px;
+    }
+    .bn-item {
+      display:flex; flex-direction:column; align-items:center; gap:3px;
+      flex:1; padding:8px 4px;
+      color:var(--muted); font-size:9px; font-family:'Inter',sans-serif;
+      background:none; border:none; cursor:pointer;
+      transition:color .15s;
+      text-transform:uppercase; letter-spacing:.04em;
+    }
+    .bn-item svg { width:18px; height:18px; }
+    .bn-item.active { color:var(--accent); }
+    .bn-item:hover { color:var(--text); }
+
+    @media (max-width:768px) {
+      .bottom-nav { display:flex; }
+    }
+
+    /* telas muito pequenas ≤ 380px */
+    @media (max-width:380px) {
+      .lang-btn span { display:none; }
+      .skills-grid { grid-template-columns:1fr; }
+      .lang-grid { gap:6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left"></div>
+  <div class="topbar-right">
+    <span class="topbar-label">lang //</span>
+    <button class="lang-btn active" onclick="setLang('pt')" id="btn-pt">PT</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
+    <div class="topbar-divider"></div>
+    <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme" aria-label="Toggle light/dark mode">
+      <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:11px;">
+      <div class="avatar">
+        <img 
+          src="assets/avatar.jpg"
+          alt="Caio Servulo"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='CS';"
+        />
+      </div>
+      <div class="s-name">Caio Servulo</div>
+      <div class="s-role" id="s-role">Product Manager</div>
+      <div class="s-loc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Valladolid, ES</div>
+    </div>
+
+    <div class="s-links">
+      <a href="https://linkedin.com/in/caioservulo" target="_blank" class="s-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:caiomelo22@gmail.com" class="s-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        caiomelo22@gmail.com
+      </a>
+      <a href="https://github.com/caioservulo" target="_blank" class="s-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+    </div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Navigation</div>
+      <button class="nav-item active" onclick="navTo('about',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+        <span id="nav-about">Sobre</span>
+      </button>
+      <button class="nav-item" onclick="navTo('edu',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span id="nav-edu">Educacao</span>
+      </button>
+      <button class="nav-item" onclick="navTo('exp',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        <span id="nav-exp">Experiencia</span>
+      </button>
+      <button class="nav-item" onclick="navTo('skills',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <span id="nav-skills">Skills</span>
+      </button>
+      <button class="nav-item" onclick="navTo('vol',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <span id="nav-vol">Voluntariado</span>
+      </button>
+      <button class="nav-item" onclick="navTo('cases',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        <span id="nav-cases">Cases</span>
+      </button>
+      <button class="nav-item" onclick="navTo('contact',this)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <span id="nav-contact">Contato</span>
+      </button>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <div class="hero" id="about">
+      <div class="eyebrow" id="hero-eyebrow">// product manager &amp; data strategist</div>
+      <h1 class="hero-name">Caio Servulo</h1>
+      <div class="hero-title">Product Manager &middot; Data Product Owner &middot; CX Strategist</div>
+      <p class="hero-bio" id="hero-bio">Sou um Product Manager com experiencia em analise de dados, growth e customer experience. Liderei iniciativas de produtos digitais em fintech, SaaS e varejo, desenvolvendo solucoes escalaveis e orientadas a dados que geram impacto mensuravel nos negocios. Minha experiencia conecta estrategia, tecnologia e necessidades do cliente.</p>
+      <ul class="hero-bullets">
+        <li>
+          <span class="bullet-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></span>
+          <span id="hb-current">Atualmente trabalhando como Data &amp; Product Manager em startup de gestao empresarial</span>
+        </li>
+        <li>
+          <span class="bullet-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>
+          <span id="hb-collab">Buscando colaborar com Comunidades de Produto e Dados</span>
+        </li>
+        <li>
+          <span class="bullet-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>
+          <div class="hero-bullet-content">
+            <span id="hb-ask">Pergunte-me sobre:</span>
+            <div class="tag-row" style="margin-top:0;">
+              <span class="tag">Agile</span><span class="tag">Backlog</span><span class="tag">UX</span>
+              <span class="tag">OKRs</span><span class="tag">KPIs</span><span class="tag">Data Analytics</span>
+              <span class="tag">SQL</span><span class="tag">Data Viz</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+<!-- IDIOMAS -->
+    <section>
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><h2 class="sec-title" id="s-lang">Idiomas</h2></div>
+      <div class="lang-grid">
+        <!-- Brasil -->
+        <div class="lang-card">
+          <div class="lang-flag-wrap">
+            <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+              <defs><clipPath id="cp-br"><circle cx="22" cy="22" r="22"/></clipPath></defs>
+              <g clip-path="url(#cp-br)">
+                <rect width="44" height="44" fill="#009C3B"/>
+                <polygon points="22,6 40,22 22,38 4,22" fill="#FFDF00"/>
+                <circle cx="22" cy="22" r="10" fill="#002776"/>
+                <path d="M12.5 21C15.5 17 19 15.5 22 15.5s6.5 1.5 9.5 5.5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <text x="22" y="25.5" text-anchor="middle" font-size="4.8" fill="white" font-family="Arial" font-weight="bold" letter-spacing="0.6">BRASIL</text>
+              </g>
+              <circle cx="22" cy="22" r="21.5" fill="none" stroke="var(--border)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="lang-name" id="l-pt">Portugues</div>
+          <div class="lang-level" id="l-pt-lv">Nativo</div>
+          <div class="lang-sub" id="l-pt-sub">Fluencia Total</div>
+        </div>
+        <!-- EUA -->
+        <div class="lang-card">
+          <div class="lang-flag-wrap">
+            <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+              <defs><clipPath id="cp-us"><circle cx="22" cy="22" r="22"/></clipPath></defs>
+              <g clip-path="url(#cp-us)">
+                <rect width="44" height="44" fill="#B22234"/>
+                <rect y="6.77"  width="44" height="6.77" fill="white"/>
+                <rect y="20.3"  width="44" height="6.77" fill="white"/>
+                <rect y="33.84" width="44" height="6.77" fill="white"/>
+                <rect width="18.7" height="23.7" fill="#3C3B6E"/>
+                <g fill="white" font-size="5.5" font-family="Arial">
+                  <text x="1"   y="7.5">★★★</text>
+                  <text x="3.5" y="12.5">★★</text>
+                  <text x="1"   y="17.5">★★★</text>
+                  <text x="3.5" y="22.5">★★</text>
+                </g>
+              </g>
+              <circle cx="22" cy="22" r="21.5" fill="none" stroke="var(--border)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="lang-name" id="l-en">Ingles</div>
+          <div class="lang-level" id="l-en-lv">Avancado</div>
+          <div class="lang-sub">Business &amp; Tech</div>
+        </div>
+        <!-- Espanha -->
+        <div class="lang-card">
+          <div class="lang-flag-wrap">
+            <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+              <defs><clipPath id="cp-es"><circle cx="22" cy="22" r="22"/></clipPath></defs>
+              <g clip-path="url(#cp-es)">
+                <rect width="44" height="44" fill="#AA151B"/>
+                <rect y="11" width="44" height="22" fill="#F1BF00"/>
+                <rect y="11" width="44" height="3" fill="#AA151B"/>
+                <rect y="30" width="44" height="3" fill="#AA151B"/>
+              </g>
+              <circle cx="22" cy="22" r="21.5" fill="none" stroke="var(--border)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="lang-name" id="l-es">Espanhol</div>
+          <div class="lang-level" id="l-es-lv">Intermediario</div>
+          <div class="lang-sub" id="l-es-sub">Comunicacao Funcional</div>
+        </div>
+      </div>
+    </section>
+
+<!-- EDUCACAO -->
+    <section id="edu">
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h2 class="sec-title" id="s-edu">Formacao Academica</h2></div>
+      <table class="data-table">
+        <thead><tr><th id="th-inst">Instituicao</th><th id="th-course">Curso</th><th id="th-period">Periodo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>BBI</strong></td><td>MBA, Product Management &amp; IT</td><td>2022-2024<a href="https://drive.google.com/file/d/1SkSevq-x-1pzyz_OWqxXEMYq99YUX1m6/view" target="_blank" class="cert-link" style="display:inline-flex;align-items:center;gap:3px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></td></tr>
+          <tr><td><strong>Descomplica</strong></td><td id="edu-r2">MBA, Gestao Estrategica de Projetos &amp; Metodologias Ageis</td><td>2020-2021<a href="https://drive.google.com/file/d/10VMzkd_1QlN1vq-OX0lKLsUSS3YukTpj/view" target="_blank" class="cert-link" style="display:inline-flex;align-items:center;gap:3px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></td></tr>
+          <tr><td><strong>Descomplica</strong></td><td id="edu-r3">MBA, Gestao da Qualidade</td><td>2020-2021<a href="https://drive.google.com/file/d/10MAEi4bezmeTezgoSIvcFbp9f4EdXy87/view" target="_blank" class="cert-link" style="display:inline-flex;align-items:center;gap:3px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></td></tr>
+          <tr><td><strong>UFC</strong></td><td id="edu-r4">Bacharelado em Engenharia de Pesca</td><td>2014-2019<a href="https://drive.google.com/file/d/18ggxuzLvBO0C4Jl3aEABrTvj38rUQzi2/view" target="_blank" class="cert-link" style="display:inline-flex;align-items:center;gap:3px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:28px;">
+        <div class="sec-header" style="margin-bottom:14px;"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div><h3 class="sec-title" style="font-size:17px;" id="s-cert">Certificacoes</h3></div>
+        <div class="card">
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:13px;"><span style="display:inline-flex;align-items:center;vertical-align:middle;margin-right:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M15 9v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><strong>Product Management</strong> &#8212; PM3 <a href="https://www.credential.net/e1fbddc4-cba0-44ef-9ec3-7b246201558d" target="_blank" class="cert-link">Ver credencial &#8594;</a></li>
+            <li style="font-size:13px;"><span style="display:inline-flex;align-items:center;vertical-align:middle;margin-right:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><strong>Scrum Foundation Professional Certificate (SFPC)</strong> &#8212; Certiprof <a href="https://drive.google.com/file/d/1qB0UQDDBQpM322lqgHf513MdbLfWrYxz/view" target="_blank" class="cert-link">Ver credencial &#8594;</a></li>
+            <li style="font-size:13px;"><span style="display:inline-flex;align-items:center;vertical-align:middle;margin-right:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span><strong>Agile Project Management</strong> &#8212; Mackenzie <a href="https://drive.google.com/file/d/1GMD0xfgv9xkxqxDS6UEm6GLi6uc7R6QL/view" target="_blank" class="cert-link">Ver credencial &#8594;</a></li>
+            <li style="font-size:13px;"><span style="display:inline-flex;align-items:center;vertical-align:middle;margin-right:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><strong id="cert4">Gestao de Projetos</strong> &#8212; IEL <a href="https://drive.google.com/file/d/19oI-L888KLsfx8SElUvxGj5yXp5kgj1h/view" target="_blank" class="cert-link">Ver credencial &#8594;</a></li>
+            <li style="font-size:13px;"><span style="display:inline-flex;align-items:center;vertical-align:middle;margin-right:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><strong id="cert5">Gestao Agil com Scrum</strong> &#8212; SESI</li>
+            <li style="font-size:13px;"><span style="display:inline-flex;align-items:center;vertical-align:middle;margin-right:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><strong>Lean Seis Sigma White Belt</strong> &#8212; FM2S <a href="https://ead.fm2s.com.br/certificado/023089" target="_blank" class="cert-link">Ver credencial &#8594;</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<!-- SKILLS -->
+    <section id="skills">
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h2 class="sec-title" id="s-skills">Skills &amp; Proficiency</h2></div>
+      <div class="skills-grid">
+        <div class="skill-item"><div class="skill-name">Product Strategy</div><div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div><div class="skill-pct">95%</div></div>
+        <div class="skill-item"><div class="skill-name">Agile Leadership</div><div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div><div class="skill-pct">95%</div></div>
+        <div class="skill-item"><div class="skill-name">Backlog Management</div><div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div><div class="skill-pct">95%</div></div>
+        <div class="skill-item"><div class="skill-name">OKRs &amp; KPIs</div><div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div><div class="skill-pct">95%</div></div>
+        <div class="skill-item"><div class="skill-name">Stakeholder Management</div><div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div><div class="skill-pct">90%</div></div>
+        <div class="skill-item"><div class="skill-name">CX &amp; NPS Strategy</div><div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div><div class="skill-pct">90%</div></div>
+        <div class="skill-item"><div class="skill-name">Roadmap Planning</div><div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div><div class="skill-pct">90%</div></div>
+        <div class="skill-item"><div class="skill-name">UX &amp; User Discovery</div><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><div class="skill-pct">85%</div></div>
+        <div class="skill-item"><div class="skill-name">Business Analysis</div><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><div class="skill-pct">85%</div></div>
+        <div class="skill-item"><div class="skill-name">Team Management</div><div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
+        <div class="skill-item"><div class="skill-name">Data Analytics</div><div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
+        <div class="skill-item"><div class="skill-name">AI &amp; Prompt Engineering</div><div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
+      </div>
+      <div style="margin-top:30px;">
+        <div class="sec-header" style="margin-bottom:16px;"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3 class="sec-title" style="font-size:17px;" id="s-toolkit">Toolkit de Produto</h3></div>
+        <div class="toolkit-row"><span class="tk-label" id="tk1">Gestao &amp; Roadmap</span><div class="case-stack"><span class="stack-tag">Jira</span><span class="stack-tag">Miro</span><span class="stack-tag">Productboard</span><span class="stack-tag">Azure DevOps</span><span class="stack-tag">ClickUp</span></div></div>
+        <div class="toolkit-row"><span class="tk-label" id="tk2">Analise de Dados</span><div class="case-stack"><span class="stack-tag">SQL</span><span class="stack-tag">Tableau</span><span class="stack-tag">Power BI</span><span class="stack-tag">Metabase</span><span class="stack-tag">Looker Studio</span></div></div>
+        <div class="toolkit-row"><span class="tk-label" id="tk3">Automacao</span><div class="case-stack"><span class="stack-tag">n8n</span><span class="stack-tag">Alteryx</span></div></div>
+        <div class="toolkit-row"><span class="tk-label" id="tk4">Frameworks</span><div class="case-stack"><span class="stack-tag">Scrum</span><span class="stack-tag">Kanban</span><span class="stack-tag">JTBD</span><span class="stack-tag">OKRs</span><span class="stack-tag">Lean Inception</span></div></div>
+      </div>
+    </section>
+
+<!-- VOLUNTARIADO -->
+    <section id="vol">
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h2 class="sec-title" id="s-vol">Trabalho Voluntario</h2></div>
+      <div class="card"><div class="card-title">Pipoca Agil &#8212; Product Owner</div><div class="card-meta">Jul 2025 &#8212; <span id="v-present">Presente</span></div><p class="card-desc" id="v-pipoca">Lideranca da evolucao da plataforma da comunidade, priorizacao de backlog e facilitacao de rituais ageis para disseminacao de conhecimento.</p></div>
+      <div class="card"><div class="card-title">FEJECE &#8212; Board Member</div><div class="card-meta">Dez 2018 &#8212; Jun 2019</div><p class="card-desc" id="v-fejece">Atuacao no Conselho Consultivo da Federacao de Empresas Juniores, apoiando a estrategia de crescimento e governanca das empresas juniores do Ceara.</p></div>
+      <div class="card"><div class="card-title">CORAq &#8212; CEO</div><div class="card-meta">Jun 2018 &#8212; Jun 2019</div><p class="card-desc" id="v-coraq">Lideranca executiva da empresa junior, focada em estrategia de vendas, cultura organizacional e entrega de projetos de consultoria tecnica.</p></div>
+    </section>
+
+<!-- EXPERIENCIA -->
+    <section id="exp">
+      <div class="sec-header">
+        <div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+        <h2 class="sec-title" id="s-exp">Experiencia Profissional</h2>
+      </div>
+
+      <!-- Yampa -->
+      <div class="exp-item">
+        <div class="exp-logo">YMP</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-yampa">Lead Data &amp; Product Manager</div>
+          <div class="exp-company" id="ec-yampa">Yampa &#8212; Gestao Financeira</div>
+          <div class="exp-period">ago 2024 &#8212; <span class="exp-present">momento</span> &middot; <span class="exp-badge" id="eb-yampa">Tempo Integral</span> &middot; Remoto</div>
+          <div class="exp-desc" id="ed-yampa">Product Manager e estrategista de dados na Yampa, SaaS de gestao financeira para PMEs. Responsavel pela estruturacao do produto e construcao da area de inteligencia de dados, liderando discovery, priorizacao de roadmap com foco em retencao e ativacao, gestao de backlog, cerimonias ageis e acompanhamento de OKRs. Estruturacao de pipelines com SQL, Metabase e n8n, e automacao de processos com IA generativa.</div>
+          <div class="exp-tags"><span class="stack-tag">Data Strategy</span><span class="stack-tag">OKRs</span><span class="stack-tag">Roadmap</span><span class="stack-tag">SQL</span><span class="stack-tag">Metabase</span><span class="stack-tag">Power BI</span><span class="stack-tag">n8n</span><span class="stack-tag">IA Generativa</span></div>
+        </div>
+      </div>
+
+      <!-- Agilean -->
+      <div class="exp-item">
+        <div class="exp-logo">AGL</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-agilean">Product Owner</div>
+          <div class="exp-company" id="ec-agilean">Agilean</div>
+          <div class="exp-period">jun 2025 &#8212; <span class="exp-present">momento</span> &middot; <span class="exp-badge exp-badge-alt" id="eb-agilean">Consultor</span> &middot; Remoto</div>
+          <div class="exp-desc" id="ed-agilean">Responsavel pelo desenvolvimento e evolucao de produto SaaS de controle de qualidade para gestao de obras na construcao civil, conduzindo product discovery, validacao de hipoteses e priorizacao de roadmap com foco em adocao e retencao.</div>
+          <div class="exp-tags"><span class="stack-tag">SaaS</span><span class="stack-tag">Discovery</span><span class="stack-tag">Scrum</span><span class="stack-tag">UX</span><span class="stack-tag">QA</span></div>
+        </div>
+      </div>
+
+      <!-- Pague Menos CX -->
+      <div class="exp-item">
+        <div class="exp-logo">PM</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-pm1">Customer &amp; Product Experience (CX) Lead</div>
+          <div class="exp-company" id="ec-pm1">Farmacias Pague Menos</div>
+          <div class="exp-period">mar 2023 &#8212; abr 2024 &middot; <span class="exp-badge" id="eb-pm1">Tempo Integral</span> &middot; Fortaleza</div>
+          <div class="exp-desc" id="ed-pm1">Gerente de CX liderando a area da 2a maior rede de farmacias do Brasil (1.500+ lojas, 22M clientes). Reestruturacao completa da operacao de atendimento omnicanal, implementacao de CRM integrado, criacao da subarea de Client Insights e alcance dos maiores indices de NPS, NS e volume de atendimentos da historia da companhia.</div>
+          <div class="exp-tags"><span class="stack-tag">CRM Omnicanal</span><span class="stack-tag">NPS</span><span class="stack-tag">WhatsApp API</span><span class="stack-tag">RA1000</span><span class="stack-tag">150+ colaboradores</span></div>
+        </div>
+      </div>
+
+      <!-- Banco BV -->
+      <div class="exp-item">
+        <div class="exp-logo">BV</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-bv">Product Manager</div>
+          <div class="exp-company" id="ec-bv">Banco BV</div>
+          <div class="exp-period">nov 2022 &#8212; mar 2023 &middot; <span class="exp-badge" id="eb-bv">Tempo Integral</span> &middot; Sao Paulo</div>
+          <div class="exp-desc" id="ed-bv">PM no banco digital do BV, responsavel pelo desenvolvimento de solucao de controle e gestao de limites transacionais para toda a estrutura do banco, alinhada a normativas do Banco Central do Brasil (BACEN). Entrega dentro do prazo regulatorio com zero interrupcoes ao usuario final.</div>
+          <div class="exp-tags"><span class="stack-tag">Fintech</span><span class="stack-tag">BACEN</span><span class="stack-tag">Compliance</span><span class="stack-tag">PIX</span><span class="stack-tag">Scrum</span></div>
+        </div>
+      </div>
+
+      <!-- GFT -->
+      <div class="exp-item">
+        <div class="exp-logo">GFT</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-gft">Product Owner</div>
+          <div class="exp-company" id="ec-gft">GFT Technologies &#8212; Banco Votorantim</div>
+          <div class="exp-period">mai 2022 &#8212; nov 2022 &middot; <span class="exp-badge" id="eb-gft">Tempo Integral</span> &middot; Remoto</div>
+          <div class="exp-desc" id="ed-gft">Product Owner alocado no Banco Votorantim, atuando no desenvolvimento e evolucao de produtos digitais do banco com foco em discovery, priorizacao de backlog, cerimonias ageis e definicao de OKRs e KPIs da squad.</div>
+          <div class="exp-tags"><span class="stack-tag">RICE</span><span class="stack-tag">MoSCoW</span><span class="stack-tag">JIRA</span><span class="stack-tag">Refinement</span></div>
+        </div>
+      </div>
+
+      <!-- FortBrasil -->
+      <div class="exp-item">
+        <div class="exp-logo">FB</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-fort">Senior Product Manager</div>
+          <div class="exp-company" id="ec-fort">FortBrasil</div>
+          <div class="exp-period">dez 2021 &#8212; ago 2022 &middot; <span class="exp-badge" id="eb-fort">Tempo Integral</span> &middot; Fortaleza</div>
+          <div class="exp-desc" id="ed-fort">Senior PM responsavel pelo programa de onboarding e ativacao de clientes no APP FortBrasil (cartao de credito), com foco em Growth e Product-Led Growth (PLG). Alcancou +23% na taxa de ativacao de novos usuarios e -47% no tempo para atingimento do primeiro valor.</div>
+          <div class="exp-tags"><span class="stack-tag">PLG</span><span class="stack-tag">Growth</span><span class="stack-tag">Onboarding</span><span class="stack-tag">AARRR</span><span class="stack-tag">North Star</span></div>
+        </div>
+      </div>
+
+      <!-- Pague Menos SPO -->
+      <div class="exp-item">
+        <div class="exp-logo">PM</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-pm2">Senior Product Owner</div>
+          <div class="exp-company" id="ec-pm2">Farmacias Pague Menos</div>
+          <div class="exp-period">mai 2021 &#8212; nov 2021 &middot; <span class="exp-badge" id="eb-pm2">Tempo Integral</span> &middot; Fortaleza</div>
+          <div class="exp-desc" id="ed-pm2">Atuacao nas squads de CRM, Precos e Planejamento Comercial com stakeholders estrategicos, desenvolvimento de projeto de rastreabilidade e desconto com PGMN e McKinsey (Centralizacao de Precos), e gestao de backlog multidisciplinar com Scrum.</div>
+          <div class="exp-tags"><span class="stack-tag">CRM</span><span class="stack-tag">McKinsey</span><span class="stack-tag">Pricing</span><span class="stack-tag">Scrum</span></div>
+        </div>
+      </div>
+
+      <!-- SAS -->
+      <div class="exp-item">
+        <div class="exp-logo">SAS</div>
+        <div class="exp-body">
+          <div class="exp-role" id="er-sas">Project Manager</div>
+          <div class="exp-company" id="ec-sas">SAS Plataforma de Educacao (Arco Educacao)</div>
+          <div class="exp-period">jan 2020 &#8212; abr 2021 &middot; <span class="exp-badge" id="eb-sas">Tempo Integral</span> &middot; Fortaleza</div>
+          <div class="exp-desc" id="ed-sas">Gestao do maior projeto de producao de conteudo educacional da empresa com metodologias ageis. Liderou o SAS ao Vivo durante a pandemia, transformando projeto emergencial em produto estrategico com 45M+ visualizacoes no YouTube, 50K alunos simultaneos e taxa de retencao acima de 95% na Arco Educacao.</div>
+          <div class="exp-tags"><span class="stack-tag">EdTech</span><span class="stack-tag">OKRs</span><span class="stack-tag">Scrum</span><span class="stack-tag">Kanban</span><span class="stack-tag">YouTube Live</span></div>
+        </div>
+      </div>
+
+    </section>
+
+<!-- CASES -->
+    <section id="cases">
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg></div><h2 class="sec-title" id="s-cases">Cases de Sucesso</h2></div>
+      <div id="cases-container"></div>
+    </section>
+
+<!-- CONTATO -->
+    <section id="contact">
+      <div class="sec-header"><div class="sec-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div><h2 class="sec-title" id="s-contact">Vamos conectar?</h2></div>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:22px;" id="contact-desc">Aberto a oportunidades de Product Manager, Product Owner ou Business Analyst no mercado europeu.</p>
+      <div>
+        <a href="https://linkedin.com/in/caioservulo" target="_blank" class="contact-btn primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:caiomelo22@gmail.com" class="contact-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          Email
+        </a>
+        <a href="https://github.com/caioservulo/caioservulo" target="_blank" class="contact-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+      <p style="margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);" id="quote-line">// "Gosto de resolver problemas!"</p>
+    </section>
+
+  </main>
+</div>
+
+<!-- BOTTOM NAV (mobile only) -->
+<nav class="bottom-nav" id="bottom-nav">
+  <button class="bn-item active" onclick="navTo('about',this,'bn')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+    <span id="bn-about">Sobre</span>
+  </button>
+  <button class="bn-item" onclick="navTo('exp',this,'bn')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+    <span id="bn-exp">Exp.</span>
+  </button>
+  <button class="bn-item" onclick="navTo('skills',this,'bn')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    <span id="bn-skills">Skills</span>
+  </button>
+  <button class="bn-item" onclick="navTo('cases',this,'bn')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+    <span id="bn-cases">Cases</span>
+  </button>
+  <button class="bn-item" onclick="navTo('contact',this,'bn')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    <span id="bn-contact">Contato</span>
+  </button>
+</nav>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="lbClose(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <button class="lightbox-prev" onclick="lbNav(-1);event.stopPropagation()">&#8249;</button>
+  <img id="lb-img" src="" alt=""/>
+  <button class="lightbox-next" onclick="lbNav(1);event.stopPropagation()">&#8250;</button>
+  <div class="lightbox-counter" id="lb-counter"></div>
+</div>
+
+<script>
+// ─── CASES DATA ─────────────────────────────────────────────────────────────
+var CASES = {
+pt:[
+{num:"CASE 01",name:"Disrupcao na Experiencia do Cliente e Reestruturacao de CX",company:"Farmacias Pague Menos &bull; Omnichannel &amp; NPS &bull; Varejo Farmaceutico",
+context:"2&#186; maior varejo farmaceutico do Brasil, com 1.700+ lojas fisicas, e-commerce e televendas (22 milhoes de clientes).<br><strong>Papel:</strong> Gerente de CX | SAC | Produtos e Processos de Operacoes.",
+stack:["CRM Omnicanal","WhatsApp Business API","Data Analytics","Metodologias Ageis"],
+challenge:"Identificamos uma falha critica na jornada de pos-venda. A operacao utilizava sistemas legados, sem integracao e com processos despadronizados, resultando em um gargalo severo de atendimento.",
+quote:"Apenas 13% dos clientes que buscavam o SAC conseguiam atendimento, gerando alta insatisfacao e perda de receita por falta de recorrencia.",
+steps:[{t:"Reengenharia Organizacional",d:"Reestruturei as 5 camadas de coordenacao, alinhando expectativas de entrega e otimizando a gestao de mais de 150 colaboradores."},{t:"Business Case e Dados",d:"Realizei analise financeira da perda de vendas por ma experiencia. Correlacionei o CSAT com o aumento da recorrencia, viabilizando o investimento orcamentario para a area."},{t:"Transformacao Digital",d:"Atuei como PM na implementacao de um CRM Omnicanal integrado, eliminando gaps de dados e habilitando o canal WhatsApp para escalar o atendimento via paralelismo."},{t:"Cultura Client Centric",d:"Implementei indicadores de performance (NPS, CSAT, TME, TMA, NS, IA, CES) e criei a subarea de Client Insights (Cliente Oculto e Grupos Focais)."}],
+metrics:[{v:"+212%",l:"Indice de atendimento"},{v:"+264%",l:"Clientes atendidos/mes"},{v:"+843%",l:"Melhora no Nivel de Servico historico"},{v:"-92%",l:"Reducao no TME"},{v:"-88%",l:"Reducao no Customer Effort Score"},{v:"+7,5%",l:"Aumento no NPS"}],
+learnings:["<strong>Tecnologia como Meio:</strong> Evoluir sistemas e dados so gera impacto real se o time estiver treinado e a cultura organizacional acompanhar a mudanca.","<strong>Gestao de Larga Escala:</strong> A experiencia solida em gestao de crise e lideranca de grandes times foi fundamental para estabilizar a operacao na transicao.","<strong>Visao de Produto:</strong> Atuar como PM no CRM interno permitiu que o produto fosse desenhado exatamente para a dor da operacao, evitando desperdicio de desenvolvimento."],
+images:[],
+labels:{ctx:"Contexto &amp; Papel",stk:"Stack &amp; Ferramentas",ch:"O Desafio",sol:"Estrategia &amp; Solucao",res:"Resultados &amp; Impacto",lrn:"Aprendizados",img:"Capturas do Sistema"}},
+
+{num:"CASE 02",name:"Modernizacao de Pipeline de Dados e Cultura Data-Driven",company:"Yampa &bull; Data Intelligence &bull; SaaS Financeiro para PMEs",
+context:"Startup brasileira de SaaS de controle financeiro para PMEs em expansao para um ecossistema completo de gestao.<br><strong>Papel:</strong> Product Growth Manager &amp; Data Strategist &mdash; Timeline: 6 meses.",
+stack:["SQL","Metabase (Open Source)","n8n","Looker Studio","Google Cloud / Data Lake"],
+challenge:"Problema critico na integridade dos dados e na confiabilidade das informacoes fornecidas via dashboards. A empresa utilizava pouco os dados para decisoes estrategicas devido a divergencia de numeros entre as areas.",
+quote:"A falta de confianca nos dados impedia a escala; as metricas de crescimento nao batiam com a realidade financeira auditada.",
+steps:[{t:"Audit &amp; Mapping",d:"Mapeamento completo dos dados existentes, identificando debitos tecnicos em bancos de dados, rotinas de consulta e gargalos de processamento."},{t:"Workshop de Regras de Negocio",d:"Facilitei workshops com todas as areas (Marketing, Produto, Financeiro, Vendas e CS) para definir conceitos unificados de metricas e alinhar expectativas."},{t:"Refatoracao Tecnica",d:"Lideranca do processo de refatoracao completa de consultas, views e tabelas, focando na sanidade da camada de consumo."},{t:"Centralizacao e Infraestrutura",d:"Reestruturamos 100% dos dashboards da empresa, migrando para Metabase, garantindo uma unica fonte da verdade."}],
+metrics:[{v:"97%",l:"Aderencia de dados criticos (MRR, ARR, Churn, CAC, LTV)"},{v:"100%",l:"Dashboards migrados para Metabase Open Source"},{v:"-33%",l:"Reducao no tempo de atualizacao de dados (3&#8594;2 dias)"},{v:"100%",l:"Decisoes de Growth e Produto baseadas nos novos dashboards"}],
+learnings:["<strong>Priorizacao em Escala:</strong> Focar na camada de visualizacao e regras de negocio quando o pipeline de ETL de back-end nao pode ser alterado imediatamente.","<strong>Visao Holistica:</strong> Entendimento profundo de como indicadores de receita recorrente impactam diferentemente cada area da empresa.","<strong>Stack Alternativa:</strong> A viabilidade tecnica e financeira de utilizar ferramentas Open Source (Metabase) integradas a fluxos de automacao (n8n) para empresas em estagio de growth."],
+images:[],
+labels:{ctx:"Contexto &amp; Papel",stk:"Stack &amp; Ferramentas",ch:"O Desafio",sol:"Estrategia &amp; Solucao",res:"Resultados &amp; Impacto",lrn:"Aprendizados",img:"Capturas do Sistema"}},
+
+{num:"CASE 03",name:"Gestao de Crise e Construcao Rapida sob Pressao Regulatoria",company:"Banco BV &bull; Produto Regulatorio &bull; Fintech",
+context:"Banco BV (Vertical de Banco Digital) &mdash; Instituicao focada em simplificar a vida financeira com agilidade de fintech e solidez tradicional.<br><strong>Papel:</strong> Product Manager &mdash; Prazo regulatorio em tempo recorde.",
+stack:["Metodologia Scrum","Fluxos de Design","Compliance Frameworks","Juridico"],
+challenge:"Implementar a nova normativa de gestao de limites transacionais exigida pelo Banco Central do Brasil em tempo recorde.",
+quote:"O desafio consistia em adequar toda a estrutura do banco digital a regras rigidas de seguranca e controle de transacoes, onde qualquer atraso resultaria em multas pesadas e riscos operacionais criticos.",
+steps:[{t:"Alinhamento Multidisciplinar",d:"Coordenei reunioes intensivas com os times Juridico e Compliance para garantir a interpretacao 100% fiel da norma tecnica."},{t:"Definicao de Escopo e Design",d:"Escrita detalhada de requisitos e estruturacao dos fluxos de UX em parceria direta com o time de Design."},{t:"Execucao Agil",d:"Conduzi refinamentos tecnicos com o time de Engenharia e gerenciei o ciclo de implementacao com Scrum, priorizando o MVP necessario para conformidade."}],
+metrics:[{v:"0",l:"Multas pecuniarias &mdash; compliance total dentro do prazo do Banco Central"},{v:"0%",l:"Interrupcao no servico ao usuario final durante a entrega"},{v:"100%",l:"Conformidade regulatoria com a normativa de limites PIX"}],
+learnings:["<strong>Comunicacao Objetiva:</strong> E o ativo mais valioso em cenarios de alta pressao e prazos curtos.","<strong>Engajamento entre Areas:</strong> A capacidade de quebrar silos foi o diferencial para alinhar o senso de urgencia entre engenharia e compliance."],
+images:[],
+labels:{ctx:"Contexto &amp; Papel",stk:"Stack &amp; Ferramentas",ch:"O Desafio",sol:"Estrategia &amp; Solucao",res:"Resultados &amp; Impacto",lrn:"Aprendizados",img:"Capturas do Sistema"}},
+
+{num:"CASE 04",name:"Desenvolvimento de Novo Produto de RH &mdash; Foco no Ecossistema",company:"Yampa &bull; Growth &amp; Activation &bull; SaaS",
+context:"Yampa &mdash; Startup de SaaS financeiro para MPEs em transicao para um ecossistema de gestao empresarial.<br><strong>Papel:</strong> Product Growth Manager &amp; Data Strategist &mdash; Timeline: 9 dias (MVP).",
+stack:["Low-code","Cloud Databases","Benchmarking","Lean Inception"],
+challenge:"Desenvolver e validar um novo produto de RH para o ecossistema da Yampa, garantindo agilidade sem onerar o time de engenharia, que estava focado em outras demandas estrategicas.",
+quote:"O objetivo era provar a viabilidade de uma nova vertical de negocio minimizando o custo de oportunidade tecnico e validando hipoteses de mercado rapidamente.",
+steps:[{t:"Benchmarking Estrategico",d:"Mapeamento de concorrentes para identificar diferenciais competitivos e lacunas no mercado de RH para pequenos empreendedores."},{t:"Lean Inception",d:"Facilitei uma dinamica colaborativa com diferentes areas para alinhar a visao do produto e o escopo do primeiro teste."},{t:"Product Design &amp; Requirements",d:"Mapeei fluxos principais, funcionalidades e escrevi requisitos detalhados com criterios de aceite claros."},{t:"Desenvolvimento Low-code",d:"Construi a plataforma funcional utilizando ferramentas low-code integradas a bancos de dados em nuvem, com total independencia do time de engenharia."},{t:"Stakeholder Alignment",d:"Apresentei a solucao funcional para CEO e Diretores de Produto, Marketing e Vendas para definicao do plano de teste com clientes."}],
+metrics:[{v:"9 dias",l:"Time-to-market do produto testavel"},{v:"0%",l:"Impacto no backlog do time de engenharia"},{v:"100%",l:"Aprovacao da solucao pelas areas de negocio"}],
+learnings:["<strong>Low-code como Ferramenta Estrategica:</strong> A prototipacao low-code e poderosa para validar hipoteses antes de investir horas de desenvolvimento senior.","<strong>Clareza na Cadeia de Valor:</strong> O sucesso da proposta dependeu da comunicacao clara das hipoteses de mercado para os stakeholders."],
+images:["https://github.com/user-attachments/assets/4dac44d2-4357-41ad-a7a7-fa5206f9683b","https://github.com/user-attachments/assets/20a06c1e-6132-4784-a4f0-f57b2a0b736b","https://github.com/user-attachments/assets/c0605488-8984-4aa5-88c2-a7ca5b2de709","https://github.com/user-attachments/assets/f8ab32d0-a5a9-49a0-a105-3372bac0a761","https://github.com/user-attachments/assets/ac40420f-a37a-44c8-bc6a-476ea340e6b1"],
+labels:{ctx:"Contexto &amp; Papel",stk:"Stack &amp; Ferramentas",ch:"O Desafio",sol:"Estrategia &amp; Solucao",res:"Resultados &amp; Impacto",lrn:"Aprendizados",img:"O Sistema"}},
+
+{num:"CASE 05",name:"SAS ao Vivo &mdash; De Projeto de Crise a Produto Estrategico",company:"SAS Educacao (Arco Educacao) &bull; Produto de Retencao &bull; EdTech SaaS",
+context:"SAS Educacao (Arco Educacao) &mdash; Plataforma SaaS lider em ensino basico no Brasil.<br><strong>Papel:</strong> Product Owner &mdash; Timeline: 1 ano e meio (fase intensiva de pandemia).",
+stack:["YouTube Live Streaming","Metodologias Ageis","Gestao de Backlog de Alta Prioridade"],
+challenge:"Com o fechamento fisico das escolas durante a pandemia, o produto core do SAS foi diretamente impactado. Era preciso criar uma solucao imediata para manter a continuidade do aprendizado.",
+quote:"Precisavamos transformar o modelo de ensino em dias, garantindo que a educacao chegasse a todos os niveis escolares, do ensino fundamental ao pre-universitario.",
+steps:[{t:"Pivotagem para Live Learning",d:"Identificamos que aulas ao vivo eram a melhor forma de simular o ambiente de sala de aula e manter o vinculo emocional e pedagogico."},{t:"Escalabilidade de Conteudo",d:"Expandimos a estrategia inicial para cobrir toda a grade curricular, das series iniciais ate as mais avancadas."},{t:"Democratizacao (Open Content)",d:"Tomamos a decisao estrategica de abrir o conteudo, liberando aulas gratuitas ao vivo no YouTube para todo o Brasil."},{t:"Operacao de Guerra",d:"Estruturamos infraestrutura capaz de suportar transmissoes simultaneas em larga escala com um corpo docente de elite."}],
+metrics:[{v:"45M+",l:"Visualizacoes no canal do YouTube"},{v:"50K",l:"Alunos simultaneos no pico (Esquenta ENEM)"},{v:"&gt;95%",l:"Taxa de retencao de clientes na Arco Educacao"},{v:"1.400+",l:"Aprovacoes anuais em Medicina apoiadas"},{v:"36",l:"Salas de aula simultaneas com 60 professores"},{v:"40h+",l:"Programacao semanal ao vivo"}],
+learnings:["<strong>Human Centricity:</strong> Gerir um projeto neste tamanho em um momento de dor global trouxe aprendizado inestimavel sobre o papel da tecnologia na sociedade.","<strong>Agilidade em Crise:</strong> Transformar um projeto emergencial em produto core estrategico, validando hipoteses em tempo real com milhoes de usuarios.","<strong>Proposito como Diferencial:</strong> Disponibilizar conteudo gratuito em momento de incerteza fortaleceu o branding da marca de forma sem precedentes."],
+images:[],
+labels:{ctx:"Contexto &amp; Papel",stk:"Stack &amp; Ferramentas",ch:"O Desafio",sol:"Estrategia &amp; Solucao",res:"Resultados &amp; Impacto",lrn:"Aprendizados",img:"Capturas do Sistema"}}
+],
+
+en:[
+{num:"CASE 01",name:"Customer Experience Disruption &amp; CX Restructuring",company:"Farmacias Pague Menos &bull; Omnichannel &amp; NPS &bull; Pharmacy Retail",
+context:"2nd largest pharmacy retail chain in Brazil, with 1,700+ physical stores, e-commerce and telesales (22 million customers).<br><strong>Role:</strong> CX Manager | Customer Service | Operations Products &amp; Processes.",
+stack:["Omnichannel CRM","WhatsApp Business API","Data Analytics","Agile Methodologies"],
+challenge:"We identified a critical failure in the post-sale journey. The operation relied on legacy systems with no integration and non-standardized processes, creating a severe service bottleneck.",
+quote:"Only 13% of customers who reached out to customer service actually received assistance, generating high dissatisfaction and revenue loss from lack of recurrence.",
+steps:[{t:"Organizational Re-engineering",d:"Restructured the 5 coordination layers, aligning delivery expectations and optimizing the management of over 150 employees."},{t:"Business Case &amp; Data",d:"Conducted financial analysis of sales loss due to poor experience. Correlated CSAT with increased recurrence, enabling budget investment for the area."},{t:"Digital Transformation",d:"Acted as PM in the implementation of an integrated Omnichannel CRM, eliminating data gaps and enabling WhatsApp as a scalable parallel support channel."},{t:"Client Centric Culture",d:"Implemented performance indicators (NPS, CSAT, AHT, ASA, SL, Abandonment, CES) and created the Client Insights sub-area (Mystery Shopper &amp; Focus Groups)."}],
+metrics:[{v:"+212%",l:"Service rate improvement"},{v:"+264%",l:"Customers served per month"},{v:"+843%",l:"Improvement in historical Service Level"},{v:"-92%",l:"Reduction in Average Speed of Answer"},{v:"-88%",l:"Reduction in Customer Effort Score"},{v:"+7.5%",l:"NPS increase"}],
+learnings:["<strong>Technology as a Mean:</strong> Evolving systems and data only creates real impact if the team is trained and organizational culture follows the change.","<strong>Large-Scale Management:</strong> Solid experience in crisis management and leading large teams was key to stabilizing the operation during the transition.","<strong>Product Vision:</strong> Acting as PM on the internal CRM allowed the product to be designed exactly for the operation's pain points, avoiding development waste."],
+images:[],labels:{ctx:"Context &amp; Role",stk:"Stack &amp; Tools",ch:"The Challenge",sol:"Strategy &amp; Solution",res:"Results &amp; Impact",lrn:"Learnings",img:"System Screenshots"}},
+
+{num:"CASE 02",name:"Data Pipeline Modernization &amp; Data-Driven Culture",company:"Yampa &bull; Data Intelligence &bull; Financial SaaS for SMEs",
+context:"Brazilian financial SaaS startup for SMEs expanding into a full business management ecosystem.<br><strong>Role:</strong> Product Growth Manager &amp; Data Strategist &mdash; Timeline: 6 months.",
+stack:["SQL","Metabase (Open Source)","n8n","Looker Studio","Google Cloud / Data Lake"],
+challenge:"A critical problem in data integrity and reliability of dashboard information. The company underused data for strategic decisions due to number divergences between departments.",
+quote:"The lack of trust in data was preventing scale; growth metrics did not align with audited financial reality.",
+steps:[{t:"Audit &amp; Mapping",d:"Full mapping of existing data, identifying technical debt in databases, query routines, and processing bottlenecks."},{t:"Business Rules Workshop",d:"Facilitated workshops with all departments (Marketing, Product, Finance, Sales, CS) to define unified metric concepts and align expectations."},{t:"Technical Refactoring",d:"Led the full refactoring of queries, views, and tables, focusing on the health of the consumption layer."},{t:"Centralization &amp; Infrastructure",d:"Restructured 100% of company dashboards, migrating to Metabase, establishing a single source of truth."}],
+metrics:[{v:"97%",l:"Data adherence for critical metrics (MRR, ARR, Churn, CAC, LTV)"},{v:"100%",l:"Dashboards migrated to Metabase Open Source"},{v:"-33%",l:"Reduction in data update wait time (3&#8594;2 days)"},{v:"100%",l:"Growth &amp; Product decisions based on new dashboards"}],
+learnings:["<strong>Prioritization at Scale:</strong> The importance of focusing on the visualization layer and business rules when the back-end ETL pipeline cannot be immediately changed.","<strong>Holistic View:</strong> Deep understanding of how recurring revenue indicators differently impact each area of the company.","<strong>Alternative Stack:</strong> The technical and financial viability of using Open Source tools (Metabase) integrated with automation flows (n8n) for growth-stage companies."],
+images:[],labels:{ctx:"Context &amp; Role",stk:"Stack &amp; Tools",ch:"The Challenge",sol:"Strategy &amp; Solution",res:"Results &amp; Impact",lrn:"Learnings",img:"System Screenshots"}},
+
+{num:"CASE 03",name:"Crisis Management &amp; Rapid Build Under Regulatory Pressure",company:"Banco BV &bull; Regulatory Product &bull; Fintech",
+context:"Banco BV (Digital Banking Vertical) &mdash; Institution focused on simplifying financial life with fintech agility and traditional solidity.<br><strong>Role:</strong> Product Manager &mdash; Regulatory deadline in record time.",
+stack:["Scrum Methodology","Design Flows","Compliance Frameworks","Legal"],
+challenge:"Implement the new transaction limit management regulation required by the Central Bank of Brazil in record time.",
+quote:"The challenge was to adapt the entire digital bank structure to strict security and transaction control rules, where any delay would result in heavy fines and critical operational risks.",
+steps:[{t:"Multidisciplinary Alignment",d:"Coordinated intensive meetings with Legal and Compliance teams to ensure 100% accurate interpretation of the technical regulation."},{t:"Scope Definition &amp; Design",d:"Detailed requirements writing and UX flow structuring in direct partnership with the Design team."},{t:"Agile Execution",d:"Led technical refinements with the Engineering team and managed the implementation cycle using Scrum, prioritizing the MVP needed for compliance."}],
+metrics:[{v:"0",l:"Financial fines &mdash; full compliance within Central Bank deadline"},{v:"0%",l:"Service interruption for end users during delivery"},{v:"100%",l:"Regulatory compliance with PIX transaction limit regulation"}],
+learnings:["<strong>Objective Communication:</strong> The most valuable asset in high-pressure scenarios with tight deadlines.","<strong>Cross-functional Engagement:</strong> The ability to break down silos was the key differentiator for aligning urgency between engineering and compliance."],
+images:[],labels:{ctx:"Context &amp; Role",stk:"Stack &amp; Tools",ch:"The Challenge",sol:"Strategy &amp; Solution",res:"Results &amp; Impact",lrn:"Learnings",img:"System Screenshots"}},
+
+{num:"CASE 04",name:"New HR Product Development &mdash; Ecosystem Focus",company:"Yampa &bull; Growth &amp; Activation &bull; SaaS",
+context:"Yampa &mdash; Financial SaaS startup for SMEs transitioning to a full business management ecosystem.<br><strong>Role:</strong> Product Growth Manager &amp; Data Strategist &mdash; Timeline: 9 days (MVP).",
+stack:["Low-code","Cloud Databases","Benchmarking","Lean Inception"],
+challenge:"Develop and validate a new HR product for the Yampa ecosystem, ensuring speed without burdening the engineering team, which was focused on other strategic demands.",
+quote:"The goal was to prove the viability of a new business vertical while minimizing technical opportunity cost and rapidly validating market hypotheses.",
+steps:[{t:"Strategic Benchmarking",d:"Mapped competitors to identify competitive advantages and market gaps in HR for small entrepreneurs."},{t:"Lean Inception",d:"Facilitated a collaborative dynamic with different departments to align product vision and scope for the first test."},{t:"Product Design &amp; Requirements",d:"Mapped main flows and features, writing detailed requirements with clear acceptance criteria."},{t:"Low-code Development",d:"Built the functional platform using low-code tools integrated with cloud databases, fully independent of the engineering team."},{t:"Stakeholder Alignment",d:"Presented the functional solution to CEO and Directors of Product, Marketing, and Sales to define the customer testing plan."}],
+metrics:[{v:"9 days",l:"Time-to-market for testable product"},{v:"0%",l:"Impact on engineering team backlog"},{v:"100%",l:"Approval by all business areas"}],
+learnings:["<strong>Low-code as Strategic Tool:</strong> Low-code prototyping is powerful for validating market hypotheses before investing senior development hours.","<strong>Value Chain Clarity:</strong> The success of the proposal depended on clearly communicating market hypotheses to stakeholders."],
+images:["https://github.com/user-attachments/assets/4dac44d2-4357-41ad-a7a7-fa5206f9683b","https://github.com/user-attachments/assets/20a06c1e-6132-4784-a4f0-f57b2a0b736b","https://github.com/user-attachments/assets/c0605488-8984-4aa5-88c2-a7ca5b2de709","https://github.com/user-attachments/assets/f8ab32d0-a5a9-49a0-a105-3372bac0a761","https://github.com/user-attachments/assets/ac40420f-a37a-44c8-bc6a-476ea340e6b1"],
+labels:{ctx:"Context &amp; Role",stk:"Stack &amp; Tools",ch:"The Challenge",sol:"Strategy &amp; Solution",res:"Results &amp; Impact",lrn:"Learnings",img:"The System"}},
+
+{num:"CASE 05",name:"SAS Live &mdash; From Crisis Project to Strategic Product",company:"SAS Educacao (Arco Educacao) &bull; Retention Product &bull; EdTech SaaS",
+context:"SAS Educacao (Arco Educacao) &mdash; Leading SaaS platform in Brazilian K-12 education.<br><strong>Role:</strong> Product Owner &mdash; Timeline: 1.5 years (intensive pandemic phase).",
+stack:["YouTube Live Streaming","Agile Methodologies","High-Priority Backlog Management"],
+challenge:"With physical school closures during the pandemic, SAS's core product was directly impacted. The challenge was to create an immediate solution to maintain learning continuity.",
+quote:"We needed to transform the teaching model in days, ensuring education reached all school levels, from elementary through pre-university.",
+steps:[{t:"Pivot to Live Learning",d:"Identified that live classes were the best way to simulate the classroom environment and maintain the emotional and pedagogical bond."},{t:"Content Scalability",d:"Expanded the initial strategy to cover the full curriculum, from early grades through advanced levels."},{t:"Democratization (Open Content)",d:"Made the strategic decision to open content, releasing free live classes on YouTube for all of Brazil."},{t:"War-Room Operations",d:"Built infrastructure capable of supporting large-scale simultaneous broadcasts with an elite teaching staff."}],
+metrics:[{v:"45M+",l:"YouTube channel views"},{v:"50K",l:"Simultaneous students at peak (ENEM Prep)"},{v:"&gt;95%",l:"Customer retention rate at Arco Educacao"},{v:"1,400+",l:"Annual medical school admissions supported"},{v:"36",l:"Simultaneous classrooms with 60 teachers"},{v:"40h+",l:"Weekly live programming"}],
+learnings:["<strong>Human Centricity:</strong> Managing a project of this scale during a moment of global pain brought invaluable lessons about technology's role in society.","<strong>Crisis Agility:</strong> Transforming an emergency project into a core strategic product, validating hypotheses in real time with millions of users.","<strong>Purpose as Differentiator:</strong> Providing free content during a moment of uncertainty strengthened brand recognition in an unprecedented way."],
+images:[],labels:{ctx:"Context &amp; Role",stk:"Stack &amp; Tools",ch:"The Challenge",sol:"Strategy &amp; Solution",res:"Results &amp; Impact",lrn:"Learnings",img:"System Screenshots"}}
+],
+
+es:[
+{num:"CASO 01",name:"Disrupcion en la Experiencia del Cliente y Reestructuracion de CX",company:"Farmacias Pague Menos &bull; Omnichannel &amp; NPS &bull; Retail Farmaceutico",
+context:"2&#170; cadena farmaceutica mas grande de Brasil, con mas de 1.700 tiendas fisicas, e-commerce y televenta (22 millones de clientes).<br><strong>Rol:</strong> Gerente de CX | Atencion al Cliente | Productos y Procesos de Operaciones.",
+stack:["CRM Omnicanal","WhatsApp Business API","Analitica de Datos","Metodologias Agiles"],
+challenge:"Identificamos una falla critica en el proceso postventa. La operacion utilizaba sistemas heredados sin integracion y con procesos no estandarizados, creando un cuello de botella severo en la atencion.",
+quote:"Solo el 13% de los clientes que contactaban el SAC recibian atencion, generando alta insatisfaccion y perdida de ingresos por falta de recurrencia.",
+steps:[{t:"Reingenieria Organizacional",d:"Reestructure las 5 capas de coordinacion, alineando expectativas de entrega y optimizando la gestion de mas de 150 colaboradores."},{t:"Business Case y Datos",d:"Realice analisis financiero de perdida de ventas por mala experiencia. Correlacione el CSAT con el aumento de recurrencia, habilitando la inversion presupuestaria del area."},{t:"Transformacion Digital",d:"Actue como PM en la implementacion de un CRM Omnicanal integrado, eliminando brechas de datos y habilitando WhatsApp para escalar la atencion via paralelismo."},{t:"Cultura Client Centric",d:"Implemente indicadores de desempeno (NPS, CSAT, TME, TMA, NS, IA, CES) y cree la subarea de Client Insights (Cliente Oculto y Grupos Focales)."}],
+metrics:[{v:"+212%",l:"Mejora en el indice de atencion"},{v:"+264%",l:"Clientes atendidos por mes"},{v:"+843%",l:"Mejora en el Nivel de Servicio historico"},{v:"-92%",l:"Reduccion en el TME"},{v:"-88%",l:"Reduccion en el Customer Effort Score"},{v:"+7,5%",l:"Aumento en el NPS"}],
+learnings:["<strong>Tecnologia como Medio:</strong> Evolucionar sistemas y datos solo genera impacto real si el equipo esta capacitado y la cultura organizacional acompana el cambio.","<strong>Gestion a Gran Escala:</strong> La experiencia solida en gestion de crisis fue fundamental para estabilizar la operacion durante la transicion.","<strong>Vision de Producto:</strong> Actuar como PM en el CRM interno permitio que el producto fuera disenado exactamente para el dolor de la operacion."],
+images:[],labels:{ctx:"Contexto &amp; Rol",stk:"Stack &amp; Herramientas",ch:"El Desafio",sol:"Estrategia &amp; Solucion",res:"Resultados &amp; Impacto",lrn:"Aprendizajes",img:"Capturas del Sistema"}},
+
+{num:"CASO 02",name:"Modernizacion de Pipeline de Datos y Cultura Data-Driven",company:"Yampa &bull; Inteligencia de Datos &bull; SaaS Financiero para PYMEs",
+context:"Startup brasilena de SaaS de control financiero para PYMEs en expansion hacia un ecosistema completo de gestion.<br><strong>Rol:</strong> Product Growth Manager &amp; Data Strategist &mdash; Timeline: 6 meses.",
+stack:["SQL","Metabase (Open Source)","n8n","Looker Studio","Google Cloud / Data Lake"],
+challenge:"Problema critico en la integridad de datos y la confiabilidad de los dashboards. La empresa subutilizaba los datos para decisiones estrategicas debido a la divergencia de cifras entre areas.",
+quote:"La falta de confianza en los datos impedia el crecimiento; las metricas de growth no coincidian con la realidad financiera auditada.",
+steps:[{t:"Auditoria y Mapeo",d:"Mapeo completo de los datos existentes, identificando deudas tecnicas en bases de datos, rutinas de consulta y cuellos de botella."},{t:"Workshop de Reglas de Negocio",d:"Facilite talleres con todas las areas (Marketing, Producto, Finanzas, Ventas y CS) para definir conceptos unificados de metricas."},{t:"Refactorizacion Tecnica",d:"Lidere la refactorizacion completa de consultas, vistas y tablas, enfocandome en la sanidad de la capa de consumo."},{t:"Centralizacion e Infraestructura",d:"Reestructuramos el 100% de los dashboards de la empresa, migrando a Metabase y estableciendo una unica fuente de verdad."}],
+metrics:[{v:"97%",l:"Adherencia de datos criticos (MRR, ARR, Churn, CAC, LTV)"},{v:"100%",l:"Dashboards migrados a Metabase Open Source"},{v:"-33%",l:"Reduccion en tiempo de actualizacion de datos (3&#8594;2 dias)"},{v:"100%",l:"Decisiones de Growth y Producto basadas en nuevos dashboards"}],
+learnings:["<strong>Priorizacion a Escala:</strong> La importancia de enfocarse en la capa de visualizacion cuando el pipeline ETL no puede modificarse de inmediato.","<strong>Vision Holistica:</strong> Comprension profunda de como los indicadores de ingresos recurrentes impactan diferente a cada area.","<strong>Stack Alternativo:</strong> La viabilidad de usar herramientas Open Source (Metabase) integradas con automatizacion (n8n) para empresas en etapa de growth."],
+images:[],labels:{ctx:"Contexto &amp; Rol",stk:"Stack &amp; Herramientas",ch:"El Desafio",sol:"Estrategia &amp; Solucion",res:"Resultados &amp; Impacto",lrn:"Aprendizajes",img:"Capturas del Sistema"}},
+
+{num:"CASO 03",name:"Gestion de Crisis y Construccion Rapida bajo Presion Regulatoria",company:"Banco BV &bull; Producto Regulatorio &bull; Fintech",
+context:"Banco BV (Vertical de Banca Digital) &mdash; Institucion enfocada en simplificar la vida financiera con agilidad fintech y solidez tradicional.<br><strong>Rol:</strong> Product Manager &mdash; Plazo regulatorio en tiempo record.",
+stack:["Metodologia Scrum","Flujos de Diseno","Frameworks de Compliance","Juridico"],
+challenge:"Implementar la nueva normativa de gestion de limites transaccionales exigida por el Banco Central de Brasil en tiempo record.",
+quote:"El desafio consistia en adecuar toda la estructura del banco digital a reglas estrictas de seguridad y control de transacciones, donde cualquier retraso resultaria en fuertes multas.",
+steps:[{t:"Alineamiento Multidisciplinario",d:"Coordine reuniones intensivas con los equipos Juridico y de Compliance para garantizar la interpretacion 100% fiel de la norma tecnica."},{t:"Definicion de Alcance y Diseno",d:"Escritura detallada de requisitos y estructuracion de flujos de UX en asociacion directa con el equipo de Diseno."},{t:"Ejecucion Agil",d:"Conduje refinamientos tecnicos con el equipo de Ingenieria y gestion el ciclo de implementacion con Scrum, priorizando el MVP para cumplimiento."}],
+metrics:[{v:"0",l:"Multas economicas &mdash; cumplimiento total dentro del plazo del Banco Central"},{v:"0%",l:"Interrupcion del servicio al usuario final durante la entrega"},{v:"100%",l:"Conformidad regulatoria con la normativa de limites PIX"}],
+learnings:["<strong>Comunicacion Objetiva:</strong> El activo mas valioso en escenarios de alta presion con plazos ajustados.","<strong>Compromiso Interfuncional:</strong> La capacidad de romper silos fue el diferencial clave para alinear el sentido de urgencia entre ingenieria y compliance."],
+images:[],labels:{ctx:"Contexto &amp; Rol",stk:"Stack &amp; Herramientas",ch:"El Desafio",sol:"Estrategia &amp; Solucion",res:"Resultados &amp; Impacto",lrn:"Aprendizajes",img:"Capturas del Sistema"}},
+
+{num:"CASO 04",name:"Desarrollo de Nuevo Producto de RRHH &mdash; Enfoque en Ecosistema",company:"Yampa &bull; Crecimiento &amp; Activacion &bull; SaaS",
+context:"Yampa &mdash; Startup de SaaS financiero para PYMEs en transicion hacia un ecosistema de gestion empresarial.<br><strong>Rol:</strong> Product Growth Manager &amp; Data Strategist &mdash; Timeline: 9 dias (MVP).",
+stack:["Low-code","Bases de Datos en la Nube","Benchmarking","Lean Inception"],
+challenge:"Desarrollar y validar un nuevo producto de RRHH para el ecosistema de Yampa, garantizando agilidad sin sobrecargar al equipo de ingenieria, enfocado en otras demandas estrategicas.",
+quote:"El objetivo era probar la viabilidad de una nueva vertical de negocio minimizando el coste de oportunidad tecnico y validando hipotesis de mercado rapidamente.",
+steps:[{t:"Benchmarking Estrategico",d:"Mapee competidores para identificar ventajas competitivas y brechas en el mercado de RRHH para pequenos emprendedores."},{t:"Lean Inception",d:"Facilite una dinamica colaborativa con diferentes areas para alinear la vision del producto y el alcance del primer test."},{t:"Diseno de Producto &amp; Requisitos",d:"Mapee flujos principales y funcionalidades, escribiendo requisitos detallados con criterios de aceptacion claros."},{t:"Desarrollo Low-code",d:"Construi la plataforma funcional con herramientas low-code integradas a bases de datos en la nube, con total independencia del equipo de ingenieria."},{t:"Alineamiento con Stakeholders",d:"Presente la solucion funcional al CEO y Directores de Producto, Marketing y Ventas para definir el plan de prueba con clientes."}],
+metrics:[{v:"9 dias",l:"Time-to-market del producto testeable"},{v:"0%",l:"Impacto en el backlog del equipo de ingenieria"},{v:"100%",l:"Aprobacion por las areas de negocio"}],
+learnings:["<strong>Low-code como Herramienta Estrategica:</strong> La prototipacion low-code es poderosa para validar hipotesis antes de invertir horas de desarrollo senior.","<strong>Claridad en la Cadena de Valor:</strong> El exito de la propuesta dependio de comunicar claramente las hipotesis de mercado a los stakeholders."],
+images:["https://github.com/user-attachments/assets/4dac44d2-4357-41ad-a7a7-fa5206f9683b","https://github.com/user-attachments/assets/20a06c1e-6132-4784-a4f0-f57b2a0b736b","https://github.com/user-attachments/assets/c0605488-8984-4aa5-88c2-a7ca5b2de709","https://github.com/user-attachments/assets/f8ab32d0-a5a9-49a0-a105-3372bac0a761","https://github.com/user-attachments/assets/ac40420f-a37a-44c8-bc6a-476ea340e6b1"],
+labels:{ctx:"Contexto &amp; Rol",stk:"Stack &amp; Herramientas",ch:"El Desafio",sol:"Estrategia &amp; Solucion",res:"Resultados &amp; Impacto",lrn:"Aprendizajes",img:"El Sistema"}},
+
+{num:"CASO 05",name:"SAS en Vivo &mdash; De Proyecto de Crisis a Producto Estrategico",company:"SAS Educacao (Arco Educacao) &bull; Producto de Retencion &bull; EdTech SaaS",
+context:"SAS Educacao (Arco Educacao) &mdash; Plataforma SaaS lider en educacion basica en Brasil.<br><strong>Rol:</strong> Product Owner &mdash; Timeline: 1 ano y medio (fase intensiva de pandemia).",
+stack:["YouTube Live Streaming","Metodologias Agiles","Gestion de Backlog de Alta Prioridad"],
+challenge:"Con el cierre fisico de las escuelas durante la pandemia, el producto core de SAS fue directamente impactado. Era necesario crear una solucion inmediata para mantener la continuidad del aprendizaje.",
+quote:"Necesitabamos transformar el modelo de ensenanza en dias, garantizando que la educacion llegara a todos los niveles escolares, desde primaria hasta preuniversitario.",
+steps:[{t:"Pivote hacia Live Learning",d:"Identificamos que las clases en vivo eran la mejor forma de simular el entorno del aula y mantener el vinculo emocional y pedagogico."},{t:"Escalabilidad de Contenido",d:"Expandimos la estrategia inicial para cubrir todo el curriculo, desde los primeros grados hasta los mas avanzados."},{t:"Democratizacion (Contenido Abierto)",d:"Tomamos la decision estrategica de abrir el contenido, liberando clases gratuitas en vivo en YouTube para todo Brasil."},{t:"Operacion de Guerra",d:"Estructuramos infraestructura capaz de soportar transmisiones simultaneas a gran escala con un cuerpo docente de elite."}],
+metrics:[{v:"45M+",l:"Visualizaciones en el canal de YouTube"},{v:"50K",l:"Alumnos simultaneos en el pico (Esquenta ENEM)"},{v:"&gt;95%",l:"Tasa de retencion de clientes en Arco Educacao"},{v:"1.400+",l:"Admisiones anuales en Medicina apoyadas"},{v:"36",l:"Aulas simultaneas con 60 profesores"},{v:"40h+",l:"Programacion semanal en vivo"}],
+learnings:["<strong>Centrado en las Personas:</strong> Gestionar un proyecto de esta magnitud en un momento de dolor global aporto un aprendizaje invaluable sobre el rol de la tecnologia.","<strong>Agilidad en Crisis:</strong> Transformar un proyecto de emergencia en producto core estrategico, validando hipotesis en tiempo real con millones de usuarios.","<strong>Proposito como Diferencial:</strong> Ofrecer contenido gratuito en un momento de incertidumbre fortalecio el branding de la marca de manera sin precedentes."],
+images:[],labels:{ctx:"Contexto &amp; Rol",stk:"Stack &amp; Herramientas",ch:"El Desafio",sol:"Estrategia &amp; Solucion",res:"Resultados &amp; Impacto",lrn:"Aprendizajes",img:"El Sistema"}}
+]};
+
+// ─── UI STRINGS ───────────────────────────────────────────────────────────────
+var UI={
+pt:{"hero-eyebrow":"// product manager & data strategist","hero-bio":"Sou um Product Manager com experiencia em analise de dados, growth e customer experience. Liderei iniciativas de produtos digitais em fintech, SaaS e varejo, desenvolvendo solucoes escalaveis e orientadas a dados que geram impacto mensuravel nos negocios. Minha experiencia conecta estrategia, tecnologia e necessidades do cliente.","hb-current":"Atualmente trabalhando como Data & Product Manager em startup de gestao empresarial","hb-collab":"Buscando colaborar com Comunidades de Produto e Dados","hb-ask":"Pergunte-me sobre:","s-role":"Product Manager","nav-about":"Sobre","nav-cases":"Cases","nav-skills":"Skills","nav-edu":"Educacao","nav-exp":"Experiencia","nav-vol":"Voluntariado","s-exp":"Experiencia Profissional","exp-present":"momento","nav-contact":"Contato","s-lang":"Idiomas","l-pt":"Portugues","l-pt-lv":"Nativo","l-pt-sub":"Fluencia Total","l-en":"Ingles","l-en-lv":"Avancado","l-es":"Espanhol","l-es-lv":"Intermediario","l-es-sub":"Comunicacao Funcional","s-cases":"Cases de Sucesso","s-skills":"Skills & Proficiency","s-toolkit":"Toolkit de Produto","tk1":"Gestao & Roadmap","tk2":"Analise de Dados","tk3":"Automacao","tk4":"Frameworks","s-edu":"Formacao Academica","th-inst":"Instituicao","th-course":"Curso","th-period":"Periodo","edu-r2":"MBA, Gestao Estrategica de Projetos & Metodologias Ageis","edu-r3":"MBA, Gestao da Qualidade","edu-r4":"Bacharelado em Engenharia de Pesca","s-cert":"Certificacoes","cert4":"Gestao de Projetos","cert5":"Gestao Agil com Scrum","s-vol":"Trabalho Voluntario","v-present":"Presente","v-pipoca":"Lideranca da evolucao da plataforma da comunidade, priorizacao de backlog e facilitacao de rituais ageis para disseminacao de conhecimento.","v-fejece":"Atuacao no Conselho Consultivo da Federacao de Empresas Juniores, apoiando a estrategia de crescimento e governanca das empresas juniores do Ceara.","v-coraq":"Lideranca executiva da empresa junior, focada em estrategia de vendas, cultura organizacional e entrega de projetos de consultoria tecnica.","s-contact":"Vamos conectar?","contact-desc":"Aberto a oportunidades de Product Manager, Product Owner ou Business Analyst no mercado europeu.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Gestao Financeira","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Plataforma de Educacao (Arco Educacao)","eb-yampa":"Tempo Integral","eb-agilean":"Consultor","eb-pm1":"Tempo Integral","eb-bv":"Tempo Integral","eb-gft":"Tempo Integral","eb-fort":"Tempo Integral","eb-pm2":"Tempo Integral","eb-sas":"Tempo Integral","ed-yampa":"Product Manager e estrategista de dados na Yampa, SaaS de gestao financeira para PMEs. Responsavel pela estruturacao do produto e construcao da area de inteligencia de dados, liderando discovery, priorizacao de roadmap com foco em retencao e ativacao, gestao de backlog, cerimonias ageis e acompanhamento de OKRs. Estruturacao de pipelines com SQL, Metabase e n8n, e automacao de processos com IA generativa.","ed-agilean":"Responsavel pelo desenvolvimento e evolucao de produto SaaS de controle de qualidade para gestao de obras na construcao civil, conduzindo product discovery, validacao de hipoteses e priorizacao de roadmap com foco em adocao e retencao.","ed-pm1":"Gerente de CX liderando a area da 2a maior rede de farmacias do Brasil (1.500+ lojas, 22M clientes). Reestruturacao completa da operacao de atendimento omnicanal, implementacao de CRM integrado, criacao da subarea de Client Insights e alcance dos maiores indices de NPS, NS e volume de atendimentos da historia da companhia.","ed-bv":"PM no banco digital do BV, responsavel pelo desenvolvimento de solucao de controle e gestao de limites transacionais para toda a estrutura do banco, alinhada a normativas do Banco Central do Brasil (BACEN). Entrega dentro do prazo regulatorio com zero interrupcoes ao usuario final.","ed-gft":"Product Owner alocado no Banco Votorantim, atuando no desenvolvimento e evolucao de produtos digitais do banco com foco em discovery, priorizacao de backlog, cerimonias ageis e definicao de OKRs e KPIs da squad.","ed-fort":"Senior PM responsavel pelo programa de onboarding e ativacao de clientes no APP FortBrasil (cartao de credito), com foco em Growth e Product-Led Growth (PLG). Alcancou +23% na taxa de ativacao de novos usuarios e -47% no tempo para atingimento do primeiro valor.","ed-pm2":"Atuacao nas squads de CRM, Precos e Planejamento Comercial com stakeholders estrategicos, desenvolvimento de projeto de rastreabilidade e desconto com PGMN e McKinsey (Centralizacao de Precos), e gestao de backlog multidisciplinar com Scrum.","ed-sas":"Gestao do maior projeto de producao de conteudo educacional da empresa com metodologias ageis. Liderou o SAS ao Vivo durante a pandemia, transformando projeto emergencial em produto estrategico com 45M+ visualizacoes no YouTube, 50K alunos simultaneos e taxa de retencao acima de 95% na Arco Educacao.","bn-about":"Sobre","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Cases","bn-contact":"Contato","quote-line":"// \"Gosto de resolver problemas!\""},
+en:{"hero-eyebrow":"// product manager & data strategist","hero-bio":"Product Manager with expertise in data analytics, growth, and customer experience. I have led digital product initiatives across fintech, SaaS, and retail, building scalable, data-driven solutions that generate measurable business impact. My work bridges strategy, technology, and customer needs.","hb-current":"Currently working as Data & Product Manager at a business management startup","hb-collab":"Looking to collaborate with Product and Data Communities","hb-ask":"Ask me about:","s-role":"Product Manager","nav-about":"About","nav-cases":"Cases","nav-skills":"Skills","nav-edu":"Education","nav-exp":"Experience","nav-vol":"Volunteering","s-exp":"Professional Experience","exp-present":"present","nav-contact":"Contact","s-lang":"Languages","l-pt":"Portuguese","l-pt-lv":"Native","l-pt-sub":"Full Fluency","l-en":"English","l-en-lv":"Advanced","l-es":"Spanish","l-es-lv":"Intermediate","l-es-sub":"Functional Communication","s-cases":"Success Cases","s-skills":"Skills & Proficiency","s-toolkit":"Product Toolkit","tk1":"Management & Roadmap","tk2":"Data Analysis","tk3":"Automation","tk4":"Frameworks","s-edu":"Education","th-inst":"Institution","th-course":"Course","th-period":"Period","edu-r2":"MBA, Strategic Project Management & Agile Methodologies","edu-r3":"MBA, Quality Management","edu-r4":"BSc, Fisheries Engineering","s-cert":"Certifications","cert4":"Project Management","cert5":"Agile Management with Scrum","s-vol":"Volunteering","v-present":"Present","v-pipoca":"Leading the evolution of the community platform, backlog prioritization, and facilitation of agile ceremonies for knowledge sharing.","v-fejece":"Advisory Board member of the Junior Enterprise Federation, supporting growth strategy and governance.","v-coraq":"Executive leadership of the junior enterprise, focused on sales strategy, organizational culture, and delivery of technical consulting projects.","s-contact":"Let's connect!","contact-desc":"Open to Product Manager, Product Owner, or Business Analyst opportunities in the European market.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Financial Management","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Education Platform (Arco Educacao)","eb-yampa":"Full-time","eb-agilean":"Consultant","eb-pm1":"Full-time","eb-bv":"Full-time","eb-gft":"Full-time","eb-fort":"Full-time","eb-pm2":"Full-time","eb-sas":"Full-time","ed-yampa":"Product Manager and data strategist at Yampa, a financial management SaaS for SMEs. Responsible for product structuring and building the data intelligence area, leading discovery, roadmap prioritization focused on retention and activation, backlog management, agile ceremonies, and OKR tracking. Pipeline setup with SQL, Metabase and n8n, and process automation with generative AI.","ed-agilean":"Responsible for the development and evolution of a quality control SaaS product for construction site management, conducting product discovery, hypothesis validation, and roadmap prioritization focused on adoption and retention.","ed-pm1":"CX Manager leading the CX area of Brazil's 2nd largest pharmacy chain (1,500+ stores, 22M customers). Full restructuring of the omnichannel service operation, integrated CRM implementation, creation of the Client Insights sub-area, and achievement of the company's highest-ever NPS, service level, and attendance volume.","ed-bv":"PM at BV Digital Bank, responsible for developing a transaction limit management solution aligned with Brazilian Central Bank (BACEN) regulations. Delivered on time with zero service interruptions for end users.","ed-gft":"Product Owner allocated at Banco Votorantim, working on digital product development and evolution focused on discovery, backlog prioritization, agile ceremonies, and OKR/KPI definition for the squad.","ed-fort":"Senior PM responsible for the onboarding and activation program at FortBrasil app (credit card), focused on Growth and Product-Led Growth (PLG). Achieved +23% in new user activation rate and -47% in time to first value.","ed-pm2":"Worked in CRM, Pricing, and Commercial Planning squads with strategic stakeholders. Developed a traceability and discount project with PGMN and McKinsey (Price Centralization), and managed multidisciplinary backlog with Scrum.","ed-sas":"Managed the company's largest educational content production project with agile methodologies. Led SAS Live during the pandemic, transforming an emergency project into a strategic product with 45M+ YouTube views, 50K simultaneous students, and a retention rate above 95% at Arco Educacao.","bn-about":"About","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Cases","bn-contact":"Contact","quote-line":"// \"I love solving problems!\""},
+es:{"hero-eyebrow":"// product manager & estratega de datos","hero-bio":"Product Manager con experiencia en analisis de datos, growth y experiencia del cliente. He liderado iniciativas de productos digitales en fintech, SaaS y retail, desarrollando soluciones escalables y orientadas a datos que generan impacto medible en el negocio. Mi experiencia conecta estrategia, tecnologia y necesidades del cliente.","hb-current":"Actualmente trabajando como Data & Product Manager en startup de gestion empresarial","hb-collab":"Buscando colaborar con Comunidades de Producto y Datos","hb-ask":"Preguntame sobre:","s-role":"Product Manager","nav-about":"Sobre mi","nav-cases":"Casos","nav-skills":"Skills","nav-edu":"Educacion","nav-exp":"Experiencia","nav-vol":"Voluntariado","s-exp":"Experiencia Profesional","exp-present":"presente","nav-contact":"Contacto","s-lang":"Idiomas","l-pt":"Portugues","l-pt-lv":"Nativo","l-pt-sub":"Fluidez Total","l-en":"Ingles","l-en-lv":"Avanzado","l-es":"Espanol","l-es-lv":"Intermedio","l-es-sub":"Comunicacion Funcional","s-cases":"Casos de Exito","s-skills":"Skills & Nivel","s-toolkit":"Kit de Herramientas","tk1":"Gestion & Roadmap","tk2":"Analisis de Datos","tk3":"Automatizacion","tk4":"Frameworks","s-edu":"Formacion Academica","th-inst":"Institucion","th-course":"Curso","th-period":"Periodo","edu-r2":"MBA, Gestion Estrategica de Proyectos & Metodologias Agiles","edu-r3":"MBA, Gestion de la Calidad","edu-r4":"Grado en Ingenieria de Pesca","s-cert":"Certificaciones","cert4":"Gestion de Proyectos","cert5":"Gestion Agil con Scrum","s-vol":"Voluntariado","v-present":"Presente","v-pipoca":"Liderazgo de la evolucion de la plataforma comunitaria, priorizacion del backlog y facilitacion de rituales agiles para la difusion del conocimiento.","v-fejece":"Miembro del Consejo Asesor de la Federacion de Empresas Junior, apoyando la estrategia de crecimiento y gobernanza.","v-coraq":"Liderazgo ejecutivo de la empresa junior, enfocado en estrategia de ventas, cultura organizacional y entrega de proyectos de consultoria tecnica.","s-contact":"Conectemos!","contact-desc":"Abierto a oportunidades de Product Manager, Product Owner o Business Analyst en el mercado europeo.","er-yampa":"Lead Data &amp; Product Manager","er-agilean":"Product Owner","er-pm1":"Customer &amp; Product Experience (CX) Lead","er-bv":"Product Manager","er-gft":"Product Owner","er-fort":"Senior Product Manager","er-pm2":"Senior Product Owner","er-sas":"Project Manager","ec-yampa":"Yampa &#8212; Gestion Financiera","ec-agilean":"Agilean","ec-pm1":"Farmacias Pague Menos","ec-bv":"Banco BV","ec-gft":"GFT Technologies &#8212; Banco Votorantim","ec-fort":"FortBrasil","ec-pm2":"Farmacias Pague Menos","ec-sas":"SAS Plataforma de Educacion (Arco Educacao)","eb-yampa":"Tiempo Completo","eb-agilean":"Consultor","eb-pm1":"Tiempo Completo","eb-bv":"Tiempo Completo","eb-gft":"Tiempo Completo","eb-fort":"Tiempo Completo","eb-pm2":"Tiempo Completo","eb-sas":"Tiempo Completo","ed-yampa":"Product Manager y estratega de datos en Yampa, SaaS de gestion financiera para PYMEs. Responsable de la estructuracion del producto y la construccion del area de inteligencia de datos, liderando discovery, priorizacion de roadmap con foco en retencion y activacion, gestion de backlog, ceremonias agiles y seguimiento de OKRs. Pipelines con SQL, Metabase y n8n, y automatizacion con IA generativa.","ed-agilean":"Responsable del desarrollo y evolucion de un producto SaaS de control de calidad para gestion de obras en construccion civil, conduciendo product discovery, validacion de hipotesis y priorizacion de roadmap con foco en adopcion y retencion.","ed-pm1":"Gerente de CX liderando el area de la 2a cadena farmaceutica mas grande de Brasil (1.500+ tiendas, 22M clientes). Reestructuracion completa de la operacion de atencion omnicanal, implementacion de CRM integrado, creacion de la subarea Client Insights y alcance de los mayores indices de NPS, NS y volumen de atenciones de la historia de la compania.","ed-bv":"PM en el banco digital de BV, responsable del desarrollo de una solucion de control y gestion de limites transaccionales para toda la estructura del banco, alineada a las normativas del Banco Central de Brasil (BACEN). Entrega dentro del plazo regulatorio con cero interrupciones al usuario final.","ed-gft":"Product Owner asignado en Banco Votorantim, trabajando en el desarrollo y evolucion de productos digitales del banco con foco en discovery, priorizacion de backlog, ceremonias agiles y definicion de OKRs y KPIs del squad.","ed-fort":"Senior PM responsable del programa de onboarding y activacion de clientes en la app FortBrasil (tarjeta de credito), con foco en Growth y Product-Led Growth (PLG). Logro +23% en la tasa de activacion de nuevos usuarios y -47% en el tiempo para alcanzar el primer valor.","ed-pm2":"Actuacion en los squads de CRM, Precios y Planificacion Comercial con stakeholders estrategicos, desarrollo de proyecto de trazabilidad y descuento con PGMN y McKinsey (Centralizacion de Precios), y gestion de backlog multidisciplinar con Scrum.","ed-sas":"Gestion del mayor proyecto de produccion de contenido educativo de la empresa con metodologias agiles. Lidero el SAS en Vivo durante la pandemia, transformando un proyecto de emergencia en producto estrategico con 45M+ visualizaciones en YouTube, 50K alumnos simultaneos y tasa de retencion superior al 95% en Arco Educacao.","bn-about":"Sobre","bn-exp":"Exp.","bn-skills":"Skills","bn-cases":"Casos","bn-contact":"Contacto","quote-line":"// \"Me gusta resolver problemas!\""}
+};
+
+// ─── RENDER ───────────────────────────────────────────────────────────────────
+function renderCases(lang){
+  var list=CASES[lang], html='';
+  for(var i=0;i<list.length;i++){
+    var c=list[i];
+    // stack
+    var stk='';for(var t=0;t<c.stack.length;t++)stk+='<span class="stack-tag">'+c.stack[t]+'</span>';
+    // steps
+    var stp='';for(var s=0;s<c.steps.length;s++)stp+='<div class="case-step"><div class="step-num">'+(s+1)+'</div><div class="step-text"><strong>'+c.steps[s].t+':</strong> '+c.steps[s].d+'</div></div>';
+    // metrics
+    var met='';for(var m=0;m<c.metrics.length;m++)met+='<div class="metric"><div class="metric-val">'+c.metrics[m].v+'</div><div class="metric-label">'+c.metrics[m].l+'</div></div>';
+    // learnings
+    var lrn='';for(var l=0;l<c.learnings.length;l++)lrn+='<div class="learning"><span class="learn-arrow">&#8594;</span><span>'+c.learnings[l]+'</span></div>';
+    // images
+    var imgs='';
+    if(c.images&&c.images.length>0){
+      imgs='<div class="case-section"><div class="case-section-label">'+c.labels.img+'</div><div class="case-images">';
+      for(var g=0;g<c.images.length;g++)imgs+='<div class="case-img-wrap" onclick="openLightbox('+JSON.stringify(c.images)+','+g+')"><img src="'+c.images[g]+'" alt="Screenshot '+(g+1)+'" loading="lazy"/></div>';
+      imgs+='</div></div>';
+    }
+    html+=
+      '<div class="case-card" id="cc'+i+'">'
+        +'<div class="case-header" onclick="toggleCase('+i+')">'
+          +'<div class="case-header-left">'
+            +'<div class="case-num">'+c.num+'</div>'
+            +'<div class="case-name">'+c.name+'</div>'
+            +'<div class="case-company">'+c.company+'</div>'
+          +'</div>'
+          +'<div class="case-chevron">&#8964;</div>'
+        +'</div>'
+        +'<div class="case-body">'
+          +'<div class="case-divider"></div>'
+          +'<div class="case-section"><div class="case-section-label">'+c.labels.ctx+'</div><p style="font-size:14px;color:var(--muted);line-height:1.75;">'+c.context+'</p></div>'
+          +'<div class="case-section"><div class="case-section-label">'+c.labels.stk+'</div><div class="case-stack">'+stk+'</div></div>'
+          +'<div class="case-section"><div class="case-section-label">'+c.labels.ch+'</div><p style="font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:10px;">'+c.challenge+'</p><div class="case-quote">'+c.quote+'</div></div>'
+          +'<div class="case-section"><div class="case-section-label">'+c.labels.sol+'</div><div class="case-steps">'+stp+'</div></div>'
+          +'<div class="case-section"><div class="case-section-label">'+c.labels.res+'</div><div class="metrics-grid">'+met+'</div></div>'
+          +'<div class="case-section"><div class="case-section-label">'+c.labels.lrn+'</div><div class="learnings">'+lrn+'</div></div>'
+          +imgs
+        +'</div>'
+      +'</div>';
+  }
+  document.getElementById('cases-container').innerHTML=html;
+}
+
+function toggleCase(i){
+  var card=document.getElementById('cc'+i);
+  card.classList.toggle('open');
+}
+
+function setLang(lang){
+  document.documentElement.lang=lang;
+  var t=UI[lang];
+  for(var id in t){var el=document.getElementById(id);if(el)el.textContent=t[id];}
+  // update all exp-present spans
+  var presents=document.querySelectorAll('.exp-present');
+  for(var i=0;i<presents.length;i++)presents[i].textContent=t['exp-present']||'presente';
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('btn-'+lang).classList.add('active');
+  renderCases(lang);
+}
+
+function navTo(id, btn, navType) {
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior:'smooth' });
+  // sidebar nav
+  document.querySelectorAll('.nav-item').forEach(function(n){ n.classList.remove('active'); });
+  // bottom nav
+  document.querySelectorAll('.bn-item').forEach(function(n){ n.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  // sync the other nav
+  if (navType === 'bn') {
+    var sideMap = {'about':'nav-about','exp':'nav-exp','skills':'nav-skills','cases':'nav-cases','contact':'nav-contact','edu':'nav-edu','vol':'nav-vol'};
+    // find matching sidebar item by checking navTo calls
+    document.querySelectorAll('.nav-item').forEach(function(n){
+      if(n.getAttribute('onclick') && n.getAttribute('onclick').indexOf("'"+id+"'") > -1) n.classList.add('active');
+    });
+  } else {
+    document.querySelectorAll('.bn-item').forEach(function(n){
+      if(n.getAttribute('onclick') && n.getAttribute('onclick').indexOf("'"+id+"'") > -1) n.classList.add('active');
+    });
+  }
+}
+
+// ─── LIGHTBOX ─────────────────────────────────────────────────────────────────
+var _lbImgs = [], _lbIdx = 0;
+
+function openLightbox(imgs, idx) {
+  _lbImgs = imgs; _lbIdx = idx;
+  document.getElementById('lb-img').src = imgs[idx];
+  document.getElementById('lb-counter').textContent = (idx+1) + ' / ' + imgs.length;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function lbClose(e) {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+}
+
+function lbNav(dir) {
+  _lbIdx = (_lbIdx + dir + _lbImgs.length) % _lbImgs.length;
+  document.getElementById('lb-img').src = _lbImgs[_lbIdx];
+  document.getElementById('lb-counter').textContent = (_lbIdx+1) + ' / ' + _lbImgs.length;
+}
+
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+});
+
+// ─── THEME ────────────────────────────────────────────────────────────────────
+function toggleTheme() {
+  var isLight = document.documentElement.classList.toggle('light');
+  document.getElementById('icon-moon').style.display = isLight ? 'none'  : 'block';
+  document.getElementById('icon-sun').style.display  = isLight ? 'block' : 'none';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', isLight ? '#F6F8FA' : '#0D1117');
+  try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e){}
+}
+
+// On load: default dark, restore saved preference if any
+(function(){
+  var saved;
+  try { saved = localStorage.getItem('theme'); } catch(e){}
+  if (saved === 'light') {
+    document.documentElement.classList.add('light');
+    document.getElementById('icon-moon').style.display = 'none';
+    document.getElementById('icon-sun').style.display  = 'block';
+  }
+})();
+
+setLang('pt');
+</script>
+</body>
+</html>
