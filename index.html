@@ -1208,9 +1208,16 @@ function renderCases(lang){
 function toggleCase(i){
   var card=document.getElementById('cc'+i);
   card.classList.toggle('open');
+  if(card.classList.contains('open')){
+    var lang=document.documentElement.lang||'pt';
+    var list=CASES[lang]||CASES['pt'];
+    track('case_open',{case_num:list[i]?list[i].num:'',case_name:list[i]?list[i].name.substring(0,50):'',lang:lang});
+  }
 }
 
 function setLang(lang){
+  var prevLang=document.documentElement.lang;
+  if(prevLang && prevLang!==lang) track('lang_switch',{from:prevLang,to:lang});
   document.documentElement.lang=lang;
   var t=UI[lang];
   var htmlIds = {'looking-text':1,'er-pm1':1,'er-bv':1,'er-gft':1,'er-fort':1,'er-yampa':1,'er-agilean':1,'er-pm2':1,'er-sas':1,'ec-yampa':1,'ec-gft':1,'ec-pm1':1,'ec-pm2':1,'ec-sas':1,'ec-bv':1,'ec-agilean':1,'ec-fort':1};
@@ -1250,6 +1257,50 @@ function navTo(id, btn, navType) {
   }
 }
 
+// ─── GA4 EVENT TRACKING ───────────────────────────────────────────────────────
+function track(event, params) {
+  if (typeof gtag === 'undefined') return;
+  gtag('event', event, params || {});
+}
+
+// Track section views via IntersectionObserver
+function trackSections() {
+  var sections = [
+    { id:'about',   label:'Sobre' },
+    { id:'edu',     label:'Formacao' },
+    { id:'skills',  label:'Skills' },
+    { id:'exp',     label:'Experiencia' },
+    { id:'vol',     label:'Voluntariado' },
+    { id:'cases',   label:'Cases' },
+    { id:'contact', label:'Contato' },
+  ];
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        track('section_view', { section_name: e.target.dataset.label });
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(function(s) {
+    var el = document.getElementById(s.id);
+    if (el) { el.dataset.label = s.label; obs.observe(el); }
+  });
+}
+
+// Track contact button clicks
+document.addEventListener('click', function(e) {
+  var t = e.target.closest('a,button');
+  if (!t) return;
+  var href = t.href || '';
+
+  if (href.includes('linkedin.com'))   track('click_linkedin',  { location: 'contact' });
+  if (href.includes('mailto:'))        track('click_email',     { location: 'contact' });
+  if (href.includes('github.com'))     track('click_github',    { location: 'contact' });
+  if (t.classList.contains('s-link') && href.includes('linkedin')) track('click_linkedin', { location: 'sidebar' });
+});
+
 // ─── LIGHTBOX ─────────────────────────────────────────────────────────────────
 var _lbImgs = [], _lbIdx = 0;
 
@@ -1259,6 +1310,7 @@ function openLightbox(imgs, idx) {
   document.getElementById('lb-counter').textContent = (idx+1) + ' / ' + imgs.length;
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
+  track('case_image_view', {image_index: idx+1, total_images: imgs.length});
 }
 
 function closeLightbox() {
@@ -1320,6 +1372,7 @@ function initAnimations() {
 // ─── THEME ────────────────────────────────────────────────────────────────────
 function toggleTheme() {
   var isDark = document.documentElement.classList.toggle('dark');
+  track('theme_toggle', {theme: isDark ? 'dark' : 'light'});
   document.getElementById('icon-moon').style.display = isDark ? 'none'  : 'block';
   document.getElementById('icon-sun').style.display  = isDark ? 'block' : 'none';
   document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#0D1117' : '#F6F8FA');
@@ -1339,6 +1392,7 @@ function toggleTheme() {
 
 setLang('pt');
 initAnimations();
+trackSections();
 </script>
 </body>
 </html>
